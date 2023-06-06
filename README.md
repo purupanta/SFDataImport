@@ -4,7 +4,7 @@ External Data Source to Salesforce Integration
 <b> Cappex to SF Data Mapping and integration </b><hr />
 
 <table> 
-  <th><td>aaa</td></th> 
+  <tr><th>aaa</th></tr> 
   <tr><td>aaa</td></tr> 
 </table>
 

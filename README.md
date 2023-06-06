@@ -5,13 +5,14 @@ External Data Source to Salesforce Integration
 
 <table> <tr><td>aaa</td></tr> </table>
 
-| #  | File Attributes | Note |
-| -- | --------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|  #  | File Attributes | Note          |
+| --- | --------------- | ------------- |
+| 01. | Inquiry Product |               |
+| 02. | First Name      |               |
+| 02. | Last Name      |               |
 
-Inquiry Product
-First Name
+
+
 Last Name
 Email Address
 Birth Date

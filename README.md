@@ -5,7 +5,7 @@ External Data Source to Salesforce Integration
 
 <table> 
   <th><td>aaa</td></th> 
-  <tr><td>aaa</th></tr> 
+  <tr><td>aaa</td></tr> 
 </table>
 
 |  #  | File Attributes | Note          |

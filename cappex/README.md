@@ -6,15 +6,16 @@
 </table>
 -->
 
-a. Special characters such as :, ', . ?, ... will be removed if exists from each attribute values
-b. Attribute values are trimmed
+a. Special characters such as :, ', . ?, ... will be removed if exists from each attribute values <br />
+b. Attribute values are trimmed <br />
+c. bolds are "required" <br />
 
 |  FAId  | File Attributes                  | Data Types            | Default Value | Note |
 | ------ | -------------------------------- | --------------------- | ------------- | ---- |
 | 01.    | Inquiry Product                  |                       |               |      |
 | 02.    | First Name                       |                       |               |      |
-| 03.    | Last Name                        |                       |               |      |
-| 04.    | Email Address                    |                       |               |      |
+| 03.    | <b>Last Name</b>                 |                       |               |      |
+| 04.    | <b>Email Address</b>             |                       |               |      |
 | 05.    | Birth Date                       |                       |               |      |
 | 06.    | Gender                           |                       |               |      |
 | 07.    | Address1                         |                       |               |      |

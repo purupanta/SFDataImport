@@ -1,5 +1,12 @@
 # Cappex data mapping and pipeline design
 
+use Spatie\SimpleExcel\SimpleExcelReader;
+
+SimpleExcelReader::create($pathToFile)->getRows()
+   ->each(function(array $rowProperties) {
+        // process the row
+    });
+
 a. Special characters such as :, ', . ?, ... will be removed if exists from each attribute values <br />
 b. Attribute values are trimmed <br />
 c. bolds are "valuable" and "underlined" are required (or essential)<br />

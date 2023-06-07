@@ -8,7 +8,7 @@
 
 a. Special characters such as :, ', . ?, ... will be removed if exists from each attribute values <br />
 b. Attribute values are trimmed <br />
-c. bolds are "required" <br />
+c. bolds are "valuable" and "*" are required (or essential)<br />
 
 |  FAId  | File Attributes                  | Data Types            | Default Value | Note |
 | ------ | -------------------------------- | --------------------- | ------------- | ---- |

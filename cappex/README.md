@@ -1,9 +1,9 @@
-| FAId | File Attributes                  | Data Types (MaxSize) | Possible Values                                                      | Default Value | Note                                            |
+| FAId | File Attributes                  | Data Types (MaxSize) | Expected Values                                                      | Default Value | Note                                            |
 | ---- | -------------------------------- | -------------------- | -------------------------------------------------------------------- | ------------- | ----------------------------------------------- |
 | 1    | Inquiry Product                  | string(50)           | "Cappex"<br>"Greenlight"<br>"Cappex Greenlight"<br>"Cappex Transfer" | "Cappex"      |                                                 |
-| 2    | First Name                       | string(100)          |                                                                      |               |                                                 |
-| 3    | Last Name                        | string(100)          |                                                                      |               | Last Name and Email Address are required fields |
-| 4    | Email Address                    | string(100)          |                                                                      |               | Last Name and Email Address are required fields |
+| 2    | First Name                       | string(100)          |                                                                      | not-null      |                                                 |
+| 3    | Last Name                        | string(100)          |                                                                      | not-null      | Last Name and Email Address are required fields |
+| 4    | Email Address                    | string(100)          |                                                                      | not-null      | Last Name and Email Address are required fields |
 | 5    | Birth Date                       | Date                 |                                                                      | null          |                                                 |
 | 6    | Gender                           | Char                 | "M", "F", null                                                       | null          |                                                 |
 | 7    | Address1                         | string(255)          |                                                                      | null          |                                                 |

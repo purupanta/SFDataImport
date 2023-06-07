@@ -1,5 +1,4 @@
-# SFDataImport
-External Data Source to Salesforce Integration
+# Cappex mapping and pipeline synopsis
 <hr />
 <b> Cappex to SF Data Mapping and integration </b><hr />
 

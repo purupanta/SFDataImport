@@ -7,7 +7,7 @@ c. bolds are "valuable" and "underlined" are required (or essential)<br />
 
 |  FAId  | File Attributes                         | Data Types            | Default Value | Note |
 | ------ | --------------------------------------- | --------------------- | ------------- | ---- |
-| 01.    | Inquiry Product                         |                       |               |      |
+| 01.    | <b>Inquiry Product</b>                  |                       |               |      |
 | 02.    | <b>First Name</b>                       |                       |               |      |
 | 03.    | <b>Last Name*</b>                       |                       |               |      |
 | 04.    | <b>Email Address*</b>                   |                       |               |      |
@@ -24,16 +24,16 @@ c. bolds are "valuable" and "underlined" are required (or essential)<br />
 | 15.    | <b>Expected HS Graduation Date</b>      |                       |               |      |
 | 16.    | <b>HS GPA</b>                           |                       |               |      |
 | 17.    | <b>CEEB Code</b>                        |                       |               |      |
-| 18.    | <b>Major 1</b>                          |                       |               |      |
-| 19.    | <b>Major 2</b>                          |                       |               |      |
-| 20.    | <b>Major 3</b>                          |                       |               |      |
-| 26.    | <b>Transfer Student Current College</b> |                       |               |      |
-| 27.    | <b>College GPA</b>                      |                       |               |      |
-| 21.    | <b>Foreign Address</b>                  |                       |               |      |
-| 22.    | HS Name                                 |                       |               |      |
-| 23.    | SAT Composite, Updated                  |                       |               |      |
-| 24.    | SAT Composite                           |                       |               |      |
-| 25.    | ACT Composite                           |                       |               |      |
+| 18.    | <b>Transfer Student Current College</b> |                       |               |      |
+| 19.    | <b>College GPA</b>                      |                       |               |      |
+| 20.    | <b>Foreign Address</b>                  |                       |               |      |
+| 21.    | <b>Major 1</b>                          |                       |               |      |
+| 22.    | <b>Major 2</b>                          |                       |               |      |
+| 23.    | <b>Major 3</b>                          |                       |               |      |
+| 24.    | HS Name                                 |                       |               |      |
+| 25.    | SAT Composite, Updated                  |                       |               |      |
+| 26.    | SAT Composite                           |                       |               |      |
+| 27.    | ACT Composite                           |                       |               |      |
 
 
 <!--

@@ -21,23 +21,22 @@ c. bolds are "valuable" and "underlined" are required (or essential)<br />
 | 06.    | <b>Gender</b>                           |                       |               |      |
 | 07.    | <b>Address1</b>                         |                       |               |      |
 | 08.    | <b>Address2</b>                         |                       |               |      |
-| 09.    | Foreign Address                         |                       |               |      |
-| 10.    | <b>City</b>                             |                       |               |      |
-| 11.    | <b>State</b>                            |                       |               |      |
-| 12.    | <b>Zip Code</b>                         |                       |               |      |
-| 13.    | <b>Country</b>                          |                       |               |      |
-| 14.    | <b>Primary Phone</b>                    |                       |               |      |
-| 15.    | <b>Ethnicity - Fixed List</b>           |                       |               |      |
-| 16.    | <b>Expected HS Graduation Date</b>      |                       |               |      |
-| 17.    | <b>HS GPA</b>                           |                       |               |      |
-| 18.    | SAT Composite, Updated                  |                       |               |      |
-| 19.    | SAT Composite                           |                       |               |      |
-| 20.    | ACT Composite                           |                       |               |      |
-| 21.    | HS Name                                 |                       |               |      |
-| 22.    | <b>CEEB Code</b>                        |                       |               |      |
-| 23.    | <b>Major 1</b>                          |                       |               |      |
-| 24.    | <b>Major 2</b>                          |                       |               |      |
-| 25.    | Major 3                                 |                       |               |      |
-| 26.    | <b>Transfer Student Current College</b> |                       |               |      |
-| 27.    | <b>College GPA</b>                      |                       |               |      |
-
+| 09.    | <b>Transfer Student Current College</b> |                       |               |      |
+| 10.    | <b>College GPA</b>                      |                       |               |      |
+| 11.    | <b>City</b>                             |                       |               |      |
+| 12.    | <b>State</b>                            |                       |               |      |
+| 13.    | <b>Zip Code</b>                         |                       |               |      |
+| 14.    | <b>Country</b>                          |                       |               |      |
+| 15.    | <b>Primary Phone</b>                    |                       |               |      |
+| 16.    | <b>Ethnicity - Fixed List</b>           |                       |               |      |
+| 17.    | <b>Expected HS Graduation Date</b>      |                       |               |      |
+| 18.    | <b>HS GPA</b>                           |                       |               |      |
+| 19.    | <b>CEEB Code</b>                        |                       |               |      |
+| 20.    | <b>Major 1</b>                          |                       |               |      |
+| 21.    | <b>Major 2</b>                          |                       |               |      |
+| 22.    | Major 3                                 |                       |               |      |
+| 23.    | Foreign Address                         |                       |               |      |
+| 24.    | HS Name                                 |                       |               |      |
+| 25.    | SAT Composite, Updated                  |                       |               |      |
+| 26.    | SAT Composite                           |                       |               |      |
+| 27.    | ACT Composite                           |                       |               |      |

@@ -29,7 +29,7 @@ c. bolds are "valuable" and "underlined" are required (or essential)<br />
 | 20.    | <b>Foreign Address</b>                  |                       |               |      |
 | 21.    | <b>Major 1</b>                          |                       |               |      |
 | 22.    | <b>Major 2</b>                          |                       |               |      |
-| 23.    | <b>Major 3</b>                          |                       |               |      |
+| 23.    | Major 3                                 |                       |               |      |
 | 24.    | HS Name                                 |                       |               |      |
 | 25.    | SAT Composite, Updated                  |                       |               |      |
 | 26.    | SAT Composite                           |                       |               |      |

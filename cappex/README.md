@@ -1,8 +1,11 @@
 # Cappex data mapping and pipeline design
+
+<!--
 <table> 
   <tr><th><b><u>Test Head</u></b></th></tr> 
   <tr><td>Test Data</td></tr> 
 </table>
+-->
 
 a. Special characters such as :, ', . ?, ... will be removed if exists from each attribute values <br />
 b. Attribute values are trimmed <br />
@@ -12,8 +15,8 @@ c. bolds are "valuable" and "underlined" are required (or essential)<br />
 | ------ | --------------------------------------- | --------------------- | ------------- | ---- |
 | 01.    | Inquiry Product                         |                       |               |      |
 | 02.    | <b>First Name</b>                       |                       |               |      |
-| 03.    | <b>Last Name*</b>                        |                       |               |      |
-| 04.    | <b>Email Address*</b>                    |                       |               |      |
+| 03.    | <b>Last Name*</b>                       |                       |               |      |
+| 04.    | <b>Email Address*</b>                   |                       |               |      |
 | 05.    | <b>Birth Date</b>                       |                       |               |      |
 | 06.    | <b>Gender</b>                           |                       |               |      |
 | 07.    | <b>Address1</b>                         |                       |               |      |
@@ -37,3 +40,4 @@ c. bolds are "valuable" and "underlined" are required (or essential)<br />
 | 25.    | Major 3                                 |                       |               |      |
 | 26.    | <b>Transfer Student Current College</b> |                       |               |      |
 | 27.    | <b>College GPA</b>                      |                       |               |      |
+

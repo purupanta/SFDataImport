@@ -32,11 +32,11 @@ c. bolds are "valuable" and "underlined" are required (or essential)<br />
 | 17.    | <b>CEEB Code</b>                        |                       |               |      |
 | 18.    | <b>Major 1</b>                          |                       |               |      |
 | 19.    | <b>Major 2</b>                          |                       |               |      |
-| 20.    | Major 3                                 |                       |               |      |
-| 21.    | Foreign Address                         |                       |               |      |
+| 20.    | <b>Major 3</b>                          |                       |               |      |
+| 26.    | <b>Transfer Student Current College</b> |                       |               |      |
+| 27.    | <b>College GPA</b>                      |                       |               |      |
+| 21.    | <b>Foreign Address</b>                  |                       |               |      |
 | 22.    | HS Name                                 |                       |               |      |
 | 23.    | SAT Composite, Updated                  |                       |               |      |
 | 24.    | SAT Composite                           |                       |               |      |
 | 25.    | ACT Composite                           |                       |               |      |
-| 26.    | <b>Transfer Student Current College</b> |                       |               |      |
-| 27.    | <b>College GPA</b>                      |                       |               |      |

@@ -1,12 +1,5 @@
 # Cappex data mapping and pipeline design
 
-<!--
-<table> 
-  <tr><th><b><u>Test Head</u></b></th></tr> 
-  <tr><td>Test Data</td></tr> 
-</table>
--->
-
 a. Special characters such as :, ', . ?, ... will be removed if exists from each attribute values <br />
 b. Attribute values are trimmed <br />
 c. bolds are "valuable" and "underlined" are required (or essential)<br />
@@ -40,3 +33,40 @@ c. bolds are "valuable" and "underlined" are required (or essential)<br />
 | 23.    | SAT Composite, Updated                  |                       |               |      |
 | 24.    | SAT Composite                           |                       |               |      |
 | 25.    | ACT Composite                           |                       |               |      |
+
+
+<!--
+<table> 
+  <tr><th><b><u>Test Head</u></b></th></tr> 
+  <tr><td>Test Data</td></tr> 
+</table>
+In same order as original file:
+===============================
+Inquiry Product
+First Name
+Last Name
+Email Address
+Birth Date
+Gender
+Address1
+Address2
+Foreign Address
+City
+State
+Zip Code
+Country
+Primary Phone
+Ethnicity - Fixed List
+Expected HS Graduation Date
+HS GPA
+SAT Composite, Updated
+SAT Composite
+ACT Composite
+HS Name
+CEEB Code
+Major 1
+Major 2
+Major 3
+Transfer Student Current College
+College GPA
+-->

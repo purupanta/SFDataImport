@@ -8,34 +8,34 @@
 
 a. Special characters such as :, ', . ?, ... will be removed if exists from each attribute values <br />
 b. Attribute values are trimmed <br />
-c. bolds are "valuable" and "*" are required (or essential)<br />
+c. bolds are "valuable" and "underlined" are required (or essential)<br />
 
-|  FAId  | File Attributes                  | Data Types            | Default Value | Note |
-| ------ | -------------------------------- | --------------------- | ------------- | ---- |
-| 01.    | Inquiry Product                  |                       |               |      |
-| 02.    | First Name                       |                       |               |      |
-| 03.    | <b>Last Name</b>                 |                       |               |      |
-| 04.    | <b>Email Address</b>             |                       |               |      |
-| 05.    | Birth Date                       |                       |               |      |
-| 06.    | Gender                           |                       |               |      |
-| 07.    | Address1                         |                       |               |      |
-| 08.    | Address2                         |                       |               |      |
-| 09.    | Foreign Address                  |                       |               |      |
-| 10.    | City                             |                       |               |      |
-| 11.    | State                            |                       |               |      |
-| 12.    | Zip Code                         |                       |               |      |
-| 13.    | Country                          |                       |               |      |
-| 14.    | Primary Phone                    |                       |               |      |
-| 15.    | Ethnicity - Fixed List           |                       |               |      |
-| 16.    | Expected HS Graduation Date      |                       |               |      |
-| 17.    | HS GPA                           |                       |               |      |
-| 18.    | SAT Composite, Updated           |                       |               |      |
-| 19.    | SAT Composite                    |                       |               |      |
-| 20.    | ACT Composite                    |                       |               |      |
-| 21.    | HS Name                          |                       |               |      |
-| 22.    | CEEB Code                        |                       |               |      |
-| 23.    | Major 1                          |                       |               |      |
-| 24.    | Major 2                          |                       |               |      |
-| 25.    | Major 3                          |                       |               |      |
-| 26.    | Transfer Student Current College |                       |               |      |
-| 27.    | College GPA                      |                       |               |      |
+|  FAId  | File Attributes                         | Data Types            | Default Value | Note |
+| ------ | --------------------------------------- | --------------------- | ------------- | ---- |
+| 01.    | Inquiry Product                         |                       |               |      |
+| 02.    | <b>First Name</b>                       |                       |               |      |
+| 03.    | <b><u>Last Name</u></b>                 |                       |               |      |
+| 04.    | <b><u>Email Address</u></b>             |                       |               |      |
+| 05.    | <b>Birth Date</b>                       |                       |               |      |
+| 06.    | <b>Gender</b>                           |                       |               |      |
+| 07.    | <b>Address1</b>                         |                       |               |      |
+| 08.    | <b>Address2</b>                         |                       |               |      |
+| 09.    | Foreign Address                         |                       |               |      |
+| 10.    | <b>City</b>                             |                       |               |      |
+| 11.    | <b>State</b>                            |                       |               |      |
+| 12.    | <b>Zip Code</b>                         |                       |               |      |
+| 13.    | <b>Country</b>                          |                       |               |      |
+| 14.    | <b>Primary Phone</b>                    |                       |               |      |
+| 15.    | <b>Ethnicity - Fixed List</b>           |                       |               |      |
+| 16.    | <b>Expected HS Graduation Date</b>      |                       |               |      |
+| 17.    | <b>HS GPA</b>                           |                       |               |      |
+| 18.    | SAT Composite, Updated                  |                       |               |      |
+| 19.    | SAT Composite                           |                       |               |      |
+| 20.    | ACT Composite                           |                       |               |      |
+| 21.    | HS Name                                 |                       |               |      |
+| 22.    | <b>CEEB Code</b>                        |                       |               |      |
+| 23.    | <b>Major 1</b>                          |                       |               |      |
+| 24.    | <b>Major 2</b>                          |                       |               |      |
+| 25.    | Major 3                                 |                       |               |      |
+| 26.    | <b>Transfer Student Current College</b> |                       |               |      |
+| 27.    | <b>College GPA</b>                      |                       |               |      |

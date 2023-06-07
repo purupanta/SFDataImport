@@ -1,7 +1,4 @@
-# Cappex mapping and pipeline synopsis
-<hr />
-<b> Cappex to SF Data Mapping and integration </b><hr />
-
+# Cappex data mapping and pipeline design
 <!--
 <table> 
   <tr><th>Test Head</th></tr> 

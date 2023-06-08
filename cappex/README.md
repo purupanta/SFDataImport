@@ -1,6 +1,6 @@
 | FAId | File Attributes                  | Data Types (MaxSize) | Expected Values                                                      | Default Value | Note                                            |
 | ---- | -------------------------------- | -------------------- | -------------------------------------------------------------------- | ------------- | ----------------------------------------------- |
-| 1    | Inquiry Product                  | string(50)           | "Cappex"<br>"Greenlight"<br>"Cappex Greenlight"<br>"Cappex Transfer" | "Cappex"      |                                                 |
+| 1    | Inquiry Product                  | string(50)           | "Cappex", "Greenlight", "Cappex Greenlight", "Cappex Transfer"       | "Cappex"      |                                                 |
 | 2    | First Name                       | string(100)          |                                                                      | not-null      |                                                 |
 | 3    | Last Name                        | string(100)          |                                                                      | not-null      | Last Name and Email Address are required fields |
 | 4    | Email Address                    | string(100)          |                                                                      | not-null      | Last Name and Email Address are required fields |

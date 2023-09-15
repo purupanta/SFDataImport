@@ -4,10 +4,10 @@
 <b>Data preparations mapping and pipeline design:</b>
 <hr />
 
-#### Major Operatiions:
-        Contact: 
-        RFIForm: 
-        Recruitment: 
+#### Major Operatiions <sup>2</sup>:
+        Contact: Create
+        RFIForm: Create
+        Recruitment: Create, Update
 
 #### Building ConcatId:
         1. S1 = Remove all SpecialChars* from FirstName

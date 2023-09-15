@@ -5,9 +5,9 @@
 <hr />
 
 #### Major Operatiions <sup>2</sup> :
-        Contact: Lookup contact based on criteria (Ref.2). Create contact if not found
-        RFIForm: No lookup on RFIForm. Always Create RFI For every prospect
-        Recruitment: Lookup Recruitment based on criteria(Ref.2). Create if not found. Update the following fieds if Recruitment is found:
+        a. Contact: Lookup contact based on criteria (Ref.2). Create contact if not found
+        b. RFIForm: No lookup on RFIForm. Always Create RFI For every prospect
+        c. Recruitment: Lookup Recruitment based on criteria(Ref.2). Create if not found. Update the following fieds if Recruitment is found:
                 Id (The existing Recruitment's Id)
                 Student_Type__c,
                 HS_GPA__C,

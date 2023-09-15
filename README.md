@@ -38,6 +38,7 @@
         Email+FN+LN key = LOWERCASE(S3+S1+S2)
         *SpecialChars: New-line (or line break), Comma, Semicolon, Dot (or Period), Hyphen, Apostrophe, Space, Tab"
 <hr /><br />
+
 #### References:
 1. "Data Dictionary V2.0", URL: https://docs.google.com/spreadsheets/d/1FjXQeRECMETgooFskekFrrzCO1jzgogo-1M_nCODQWI/edit#gid=0
 2. Contacts, RFIForms, Recruitments operations in flow, URL: https://lucid.app/lucidchart/45222f8d-8a4a-4224-950e-4c3b47487be8/edit?page=0_0&invitationId=inv_ff90952b-77ae-4e88-bce0-9449845de378#

@@ -4,7 +4,7 @@
 <b>Data preparations mapping and pipeline design:</b>
 <hr />
 
-## Building ConcatId:
+#### Building ConcatId:
         1. S1 = Remove all SpecialChars* from FirstName
         2. S2 = Remove all SpecialChars* from LastName
         3. S3 = Pick first 10 Non SpecialChars* from the Address Street
@@ -12,7 +12,7 @@
         ConcatId = LOWERCASE(S1+S2+S3)
         *SpecialChars: New-line (or line break), Comma, Semicolon, Dot (or Period), Hyphen, Apostrophe, Space, Tab"
         
-## Building Email+FN+LN key:
+#### Building Email+FN+LN key:
         1. S1 = Remove all SpecialChars* from FirstName
         2. S2 = Remove all SpecialChars* from LastName
         3. S3 = Email leave as is
@@ -22,7 +22,7 @@
 
 <hr /><br />
 
-## References:
+#### References:
 Data Dictionary V2.0 : https://docs.google.com/spreadsheets/d/1FjXQeRECMETgooFskekFrrzCO1jzgogo-1M_nCODQWI/edit#gid=0
 
 <hr />

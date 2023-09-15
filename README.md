@@ -8,7 +8,7 @@
         Contact: Lookup contact based on criteria<sup>2</sup>. Create contact if not found
         RFIForm: No lookup on RFIForm. Always Create RFI For every prospect
         Recruitment: Lookup Recruitment based on criteria<sup2</sup>. Create if not found. Update the following fieds if Recruitment is found:
-                Id,
+                Id (The existing Recruitment's Id)
                 Student_Type__c,
                 HS_GPA__C,
                 Source__c,

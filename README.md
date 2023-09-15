@@ -3,7 +3,7 @@
 
 <b>Data preparations mapping and pipeline design:</b>
 <hr />
-<code>
+
         ## Building ConcatId:
             1. S1 = Remove all SpecialChars* from FirstName
             2. S2 = Remove all SpecialChars* from LastName
@@ -11,9 +11,7 @@
             4. Build ConcatId by concatenating strings in the following order:
                         ConcatId = LOWERCASE(S1+S2+S3)
             *SpecialChars: New-line (or line break), Comma, Semicolon, Dot (or Period), Hyphen, Apostrophe, Space, Tab"
-</code>
-
-<code>
+<br />
         ## Building Email+FN+LN key:
             1. S1 = Remove all SpecialChars* from FirstName
             2. S2 = Remove all SpecialChars* from LastName
@@ -21,12 +19,10 @@
             4. Build key by concatenating strings in the following order:
                         Email+FN+LN key = LOWERCASE(S3+S1+S2)
             *SpecialChars: New-line (or line break), Comma, Semicolon, Dot (or Period), Hyphen, Apostrophe, Space, Tab"
-</code>
 
+<hr /><br />
 
-
-
-Reference:
+## Reference:
 Data Dictionary V2.0 : https://docs.google.com/spreadsheets/d/1FjXQeRECMETgooFskekFrrzCO1jzgogo-1M_nCODQWI/edit#gid=0
 
 <hr />

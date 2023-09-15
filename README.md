@@ -4,7 +4,7 @@
 <b>Data preparations mapping and pipeline design:</b>
 <hr />
 
-#### Major Operatiions <sup>2</sup>:
+#### Major Operatiions <sup>2</sup> :
         Contact: Create
         RFIForm: Create
         Recruitment: Create, Update

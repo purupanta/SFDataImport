@@ -5,9 +5,22 @@
 <hr />
 
 #### Major Operatiions <sup>2</sup> :
-        Contact: Create
-        RFIForm: Create
-        Recruitment: Create, Update
+        Contact: Lookup contact based on criteria<sup>2</sup>. Create contact if not found
+        RFIForm: No lookup on RFIForm. Always Create RFI For every prospect
+        Recruitment: Lookup Recruitment based on criteria<sup2</sup>. Create if not found. Update the following fieds if Recruitment is found:
+                Id,
+                Student_Type__c,
+                HS_GPA__C,
+                Source__c,
+                Term__c,
+                External_System__c,
+                Contact__c,
+                Secondary_Program_or_Major_of_Intrest__c,
+                Program_Major_of_Interest__c,
+                RecordTypeId,
+                HS_Name__C,
+                HS_CEEB_Code__c,
+                Inquiry_Date__c
 
 #### Building ConcatId:
         1. S1 = Remove all SpecialChars* from FirstName

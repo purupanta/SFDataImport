@@ -11,7 +11,7 @@
         4. Build ConcatId by concatenating strings in the following order:
         ConcatId = LOWERCASE(S1+S2+S3)
         *SpecialChars: New-line (or line break), Comma, Semicolon, Dot (or Period), Hyphen, Apostrophe, Space, Tab"
-<br />
+        
 ## Building Email+FN+LN key:
         1. S1 = Remove all SpecialChars* from FirstName
         2. S2 = Remove all SpecialChars* from LastName

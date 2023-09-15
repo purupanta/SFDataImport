@@ -4,6 +4,11 @@
 <b>Data preparations mapping and pipeline design:</b>
 <hr />
 
+#### Major Operatiions:
+        Contact: 
+        RFIForm: 
+        Recruitment: 
+
 #### Building ConcatId:
         1. S1 = Remove all SpecialChars* from FirstName
         2. S2 = Remove all SpecialChars* from LastName
@@ -23,6 +28,8 @@
 <hr /><br />
 
 #### References:
-Data Dictionary V2.0 : https://docs.google.com/spreadsheets/d/1FjXQeRECMETgooFskekFrrzCO1jzgogo-1M_nCODQWI/edit#gid=0
+1. "Data Dictionary V2.0", URL: https://docs.google.com/spreadsheets/d/1FjXQeRECMETgooFskekFrrzCO1jzgogo-1M_nCODQWI/edit#gid=0
+2. Contacts, RFIForms, Recruitments operations in flow, URL: https://lucid.app/lucidchart/45222f8d-8a4a-4224-950e-4c3b47487be8/edit?page=0_0&invitationId=inv_ff90952b-77ae-4e88-bce0-9449845de378#
+3. DataLoad Log, URL: https://uky.lightning.force.com/lightning/o/DataLoadLog__c/list
 
 <hr />

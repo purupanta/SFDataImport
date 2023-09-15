@@ -5,9 +5,9 @@
 <hr />
 
 #### Major Operatiions <sup>2</sup> :
-        Contact: Lookup contact based on criteria<sup>2</sup>. Create contact if not found
+        Contact: Lookup contact based on criteria (Ref.2). Create contact if not found
         RFIForm: No lookup on RFIForm. Always Create RFI For every prospect
-        Recruitment: Lookup Recruitment based on criteria<sup2</sup>. Create if not found. Update the following fieds if Recruitment is found:
+        Recruitment: Lookup Recruitment based on criteria(Ref.2). Create if not found. Update the following fieds if Recruitment is found:
                 Id (The existing Recruitment's Id)
                 Student_Type__c,
                 HS_GPA__C,
@@ -37,9 +37,7 @@
         4. Build key by concatenating strings in the following order:
         Email+FN+LN key = LOWERCASE(S3+S1+S2)
         *SpecialChars: New-line (or line break), Comma, Semicolon, Dot (or Period), Hyphen, Apostrophe, Space, Tab"
-
 <hr /><br />
-
 #### References:
 1. "Data Dictionary V2.0", URL: https://docs.google.com/spreadsheets/d/1FjXQeRECMETgooFskekFrrzCO1jzgogo-1M_nCODQWI/edit#gid=0
 2. Contacts, RFIForms, Recruitments operations in flow, URL: https://lucid.app/lucidchart/45222f8d-8a4a-4224-950e-4c3b47487be8/edit?page=0_0&invitationId=inv_ff90952b-77ae-4e88-bce0-9449845de378#

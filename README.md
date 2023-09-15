@@ -25,7 +25,7 @@
 #### Data Mapping and Business Logic
         Ref. 1
 
-#### Building ConcatId:
+#### Building ConcatId <sup>1</sup>:
         1. S1 = Remove all SpecialChars* from FirstName
         2. S2 = Remove all SpecialChars* from LastName
         3. S3 = Pick first 10 Non SpecialChars* from the Address Street
@@ -33,7 +33,7 @@
         ConcatId = LOWERCASE(S1+S2+S3)
         *SpecialChars: New-line (or line break), Comma, Semicolon, Dot (or Period), Hyphen, Apostrophe, Space, Tab
         
-#### Building Email+FN+LN key:
+#### Building Email+FN+LN key <sup>1</sup>:
         1. S1 = Remove all SpecialChars* from FirstName
         2. S2 = Remove all SpecialChars* from LastName
         3. S3 = Email leave as is

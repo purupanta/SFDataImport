@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="HerokuMSSQLConn"
+  DTS:DTSID="{4AB3BC8E-CED9-4CB6-92DD-A23227F8BD10}"
+  DTS:CreationName="ODBC">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="server=tcp:eu-az-sql-serv1.database.windows.net;uid=uqxibojr6m2wuom;Driver={ODBC Driver 17 for SQL Server};trusted_connection=No;app=Microsoft® Visual Studio®;wsid=00470301N032011;database=dcn99156k2o0ylh;">
+      <DTS:Password
+        DTS:Name="pwd"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxB8U4GNpjkSmBgk8Bj0FfQAAAAACAAAAAAADZgAAwAAAABAAAADtiIIUZqivz43NXXURm8yNAAAAAASAAACgAAAAEAAAACnbUnJUGHt0DbFQfXP252eAAAAAaXzk5l860MXDbclO+UR31wYdzSUJLN2/7z3xVjTJiDYxNmj1V6glzZPgt7i3/z/7ix59oSbMd3XtKgC7/Or5pB+j04l6LmU+JMhjQ2Mi+5WJAG5VQdo9QEqbT3MLwsIx4SEDs2IFDvm6N86nEDzcQeGJa6y+wTmix7J5talGSqIUAAAAzAOe6azslRdcRB+dpZilhD0S/Rg=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

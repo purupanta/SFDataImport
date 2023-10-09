@@ -1,0 +1,2063 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/27/2020 9:20:02 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="00470301N032011"
+  DTS:CreatorName="AD\ppa299"
+  DTS:DTSID="{070D0F4C-36A6-4F70-AF66-7DEC35D9A33C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.93"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="UKYMajorDecoderImport"
+  DTS:PackageType="5"
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{176B740A-A9EE-4013-ABD9-DB616B66DEA2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{59D730E4-C082-4765-938A-174DE2E9C2AA}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\major_decoder_07082021.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MajorDecoderFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5A2D6297-D6A0-4EB8-8A87-F037B5476080}"
+      DTS:ObjectName="MajorDecoderFile">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">"C:\\Users\\ppa299\\Source\\Repos\\SFDataImport\\DataProcessing\\CommonFiles\\MajorDecoder\\MajorDecoder_" + (DT_STR, 30, 1258) (DT_DBDATE) GETDATE() + ".csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\MajorDecoder_2023-08-25.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MajorProgramExternalId__c"
+              DTS:DTSID="{79E8BC5F-B6B5-471B-A5C3-30307DE62501}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Major_Program__c"
+              DTS:DTSID="{FE00148C-7E69-465B-9E74-65616155BA9B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UKY_Major__c"
+              DTS:DTSID="{DFADD283-42D2-46F1-B707-4EBA5E0454CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Comment__c"
+              DTS:DTSID="{B7E63EF4-C78A-43BD-AF12-1CE2CA159E30}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MajorDecoderUpsertFail]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{AA713AA7-9CD1-4538-9782-748D05C33703}"
+      DTS:ObjectName="MajorDecoderUpsertFail">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\Logfiles\MajorDecoderFailLog_2020-09-27.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MajorProgramExternalId__c"
+              DTS:DTSID="{294DF034-555B-4D81-907E-161F58D8FCE8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Major_Program__c"
+              DTS:DTSID="{41DD713F-45D7-4006-BE8C-4114D04FF3FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UKY_Major__c"
+              DTS:DTSID="{21A9F5F5-E4D9-4CF6-8F90-29FB7AAC9B9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Comment__c"
+              DTS:DTSID="{2E6BBC0B-2A63-4573-AA2C-5C79972E1711}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{546A0F76-D302-4640-B44F-2AA68923CE21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{DC0DAD31-521E-45E8-8289-28BFF9CA244A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="1024"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorDescription"
+              DTS:DTSID="{7D56CC40-DDA0-4C05-927A-40A87C4AA524}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MajorDecoderUpsertSuccess]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{1862AFF1-D749-4D6D-B942-60D3225672A2}"
+      DTS:ObjectName="MajorDecoderUpsertSuccess">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">"C:\\Users\\ppa299\\Source\\Repos\\SFDataImport\\DataProcessing\\CommonFiles\\MajorDecoder\\Logfiles\\MajorDecoderSuccessLog_" + (DT_STR, 30, 1258) (DT_DBDATE) GETDATE() + ".csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\Logfiles\MajorDecoderSuccessLog_2023-08-25.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Major / Program"
+              DTS:DTSID="{3E1BE628-9E76-482F-90AD-5409F836F98E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Uk Major"
+              DTS:DTSID="{FD91F892-2C67-4A52-8640-BC82DE9D9504}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="18"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Id"
+              DTS:DTSID="{98999487-6C06-491A-BCBE-98395F82BC6E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}"
+      DTS:ObjectName="sql16dev01\general.SalesforceStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql16dev01\general;Initial Catalog=SalesforceStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Update Majors to UKY Major Mapping decoder"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{310f6e97-63f3-4913-b343-241b416f5a32}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Majors to UKY Major Mapping decoder"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="MajorDecoderUpsertFail">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MajorDecoderUpsertFail]"
+                  connectionManagerRefId="Package.ConnectionManagers[MajorDecoderUpsertFail]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].Columns[MajorProgramExternalId__c]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="MajorProgramExternalId__c"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[MajorProgramExternalId__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[MajorProgramExternalId__c]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].Columns[Major_Program__c]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="Major_Program__c"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[Major_Program__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[Major_Program__c]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].Columns[UKY_Major__c]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="UKY_Major__c"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[UKY_Major__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[UKY_Major__c]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].Columns[Comment__c]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Comment__c"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[Comment__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[Comment__c]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorColumn]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].Columns[ErrorDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="1024"
+                      cachedName="ErrorDescription"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorDescription]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[MajorProgramExternalId__c]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MajorProgramExternalId__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[Major_Program__c]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Major_Program__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[UKY_Major__c]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UKY_Major__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[Comment__c]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Comment__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
+                      dataType="wstr"
+                      length="1024"
+                      name="ErrorDescription" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertSuccess"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="MajorDecoderUpsertSuccess">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertSuccess.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MajorDecoderUpsertSuccess]"
+                  connectionManagerRefId="Package.ConnectionManagers[MajorDecoderUpsertSuccess]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertSuccess.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertSuccess.Inputs[Flat File Destination Input].ExternalColumns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertSuccess.Inputs[Flat File Destination Input].ExternalColumns[Major / Program]"
+                      dataType="r8"
+                      name="Major / Program" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertSuccess.Inputs[Flat File Destination Input].ExternalColumns[Uk Major]"
+                      dataType="wstr"
+                      length="255"
+                      name="Uk Major" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder\Multicast.Outputs[Multicast Output 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="PullMajorProgramDecoderFile"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MajorDecoderFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[MajorDecoderFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[MajorProgramExternalId__c]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].ExternalColumns[MajorProgramExternalId__c]"
+                      length="10"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[MajorProgramExternalId__c]"
+                      name="MajorProgramExternalId__c"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[Major_Program__c]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].ExternalColumns[Major_Program__c]"
+                      length="150"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[Major_Program__c]"
+                      name="Major_Program__c"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[UKY_Major__c]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].ExternalColumns[UKY_Major__c]"
+                      length="150"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[UKY_Major__c]"
+                      name="UKY_Major__c"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[Comment__c]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].ExternalColumns[Comment__c]"
+                      length="50"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[Comment__c]"
+                      name="Comment__c"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].ExternalColumns[MajorProgramExternalId__c]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MajorProgramExternalId__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].ExternalColumns[Major_Program__c]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Major_Program__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].ExternalColumns[UKY_Major__c]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UKY_Major__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].ExternalColumns[Comment__c]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Comment__c" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Loads or modifies data into an object of the Salesforce."
+              name="PushMajorProgramToSFObject"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Null"
+                  name="DesignObject"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="The name of the CRM object to copy data into."
+                  name="ObjectName"
+                  typeConverter="Devart.SSIS.Common.Design.TablesListConverter">MajorDecoder__c</property>
+                <property
+                  dataType="System.Int32"
+                  description="Destination action"
+                  name="Action"
+                  typeConverter="Devart.SSIS.SqlShim.DestinationAction">3</property>
+                <property
+                  dataType="System.Int32"
+                  description="The max number of records loaded in one batch. Ignored for some cloud sources."
+                  name="BatchSize">5000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the max size of local buffer."
+                  name="BufferSize">10485760</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies external identifier field."
+                  expressionType="Notify"
+                  name="ExternalId"
+                  typeConverter="Devart.SSIS.Salesforce.SalesforceDestination+ExternalIdsList">MajorProgramExternalId__c</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use Bulk API or SOAP API."
+                  name="UseBulkApi">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether multiple batches associated with a bulk load operation are processed by Salesforce in parallel or one at a time. The default is true."
+                  name="ParallelBatchProcessing">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the ID of a specific assignment rule to run for the Case or Lead."
+                  name="Assignment Rule Id" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Devart.SSIS.Salesforce.SalesforceDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Connections[SalesforceConnectionManager]"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
+                  description="Devart Connection Manager for Salesforce connections"
+                  name="SalesforceConnectionManager" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input]"
+                  errorOrTruncationOperation="Insert operation"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].Columns[MajorProgramExternalId__c]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="MajorProgramExternalId__c"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[MajorProgramExternalId__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[MajorProgramExternalId__c]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].Columns[Major_Program__c]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="Major_Program__c"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Major_Program__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[Major_Program__c]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].Columns[UKY_Major__c]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="UKY_Major__c"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[UKY_Major__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[UKY_Major__c]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].Columns[Comment__c]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Comment__c"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Comment__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output].Columns[Comment__c]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[OwnerId]"
+                      dataType="wstr"
+                      length="18"
+                      name="OwnerId" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="80"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[CreatedById]"
+                      dataType="wstr"
+                      length="18"
+                      name="CreatedById" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastModifiedById]"
+                      dataType="wstr"
+                      length="18"
+                      name="LastModifiedById" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[SystemModstamp]"
+                      dataType="dbTimeStamp"
+                      name="SystemModstamp" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastActivityDate]"
+                      dataType="dbDate"
+                      name="LastActivityDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastViewedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastViewedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastReferencedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastReferencedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Major_Program__c]"
+                      dataType="wstr"
+                      length="150"
+                      name="Major_Program__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[UKY_Major__c]"
+                      dataType="wstr"
+                      length="255"
+                      name="UKY_Major__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Comment__c]"
+                      dataType="wstr"
+                      length="50"
+                      name="Comment__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[MajorProgramExternalId__c]"
+                      dataType="wstr"
+                      length="30"
+                      name="MajorProgramExternalId__c" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Error Output"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[RecordId Output]"
+                  exclusionGroup="1"
+                  name="RecordId Output"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[RecordId Output].Columns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[RecordId Output].Columns[Id]"
+                      name="Id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder.Paths[Error Output]"
+              endId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail.Inputs[Flat File Destination Input]"
+              name="Error Output"
+              startId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[Error Output]" />
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder.Paths[Flat File Source Output]"
+              endId="Package\Update Majors to UKY Major Mapping decoder\Multicast.Inputs[Multicast Input 1]"
+              name="Flat File Source Output"
+              startId="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder.Paths[Multicast Output 1]"
+              endId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Inputs[input]"
+              name="Multicast Output 1"
+              startId="Package\Update Majors to UKY Major Mapping decoder\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder.Paths[RecordId Output]"
+              endId="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertSuccess.Inputs[Flat File Destination Input]"
+              name="RecordId Output"
+              startId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Outputs[RecordId Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Majors to UKY Major Mapping decoder 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{09d2a8a6-cff8-4ba2-86a4-723123a719e5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Majors to UKY Major Mapping decoder 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Inputs[Data Conversion Input].Columns[Major / Program]"
+                      cachedDataType="r8"
+                      cachedName="Major / Program"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Major / Program]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Major / Program]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Major / Program]"
+                      name="Copy of Major / Program"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Major / Program]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Joins additional columns to the data flow by looking up values in a object of the Salesforce."
+              name="Devart Salesforce Lookup"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Null"
+                  name="DesignObject"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="The name of the reference Object."
+                  name="Lookup Object"
+                  typeConverter="Devart.SSIS.Common.Design.TablesListConverter">MajorDecoder__c</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of objects in the batch query."
+                  name="BatchSize">50</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of cached objects."
+                  name="CacheSize">2000</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Redirect no matching rows to error output."
+                  name="NoMatchAsError">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether to pick the first row if more than one match is found or redirect the input row to the error output with an error message."
+                  name="UseFirstMatchInMultipleResults">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether to set null values or create no lookup relationship between the objects if no matches are found."
+                  name="UseNullsIfNoMatchFound">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether to use case insensitive comparison in Lookup"
+                  name="CaseInsensitiveLookup">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Enables local SQL processing, which allows using more standard SELECT statement features."
+                  name="LocalSQLEngine">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Devart.SSIS.Salesforce.SalesforceLookup</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Connections[SalesforceConnectionManager]"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
+                  description="Devart Connection Manager for Salesforce connections"
+                  name="SalesforceConnectionManager" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Inputs[Lookup Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Inputs[Lookup Input].Columns[Copy of Major / Program]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Major / Program"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Major / Program]"
+                      name="Copy of Major / Program">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table for lookup condition"
+                          name="ReferenceColumn"
+                          typeConverter="Devart.SSIS.SqlShim.LookupComponent+SourceColumnList">Major_Program__c</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Match Output]"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Match Output].Columns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Match Output].Columns[Id]"
+                      name="Id">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table to copy data from."
+                          name="SourceColumn"
+                          typeConverter="Devart.SSIS.SqlShim.LookupComponent+SourceColumnList">Id</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Match Output].Columns[MajorProgramExternalId__c]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Match Output].Columns[MajorProgramExternalId__c]"
+                      name="MajorProgramExternalId__c">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table to copy data from."
+                          name="SourceColumn"
+                          typeConverter="Devart.SSIS.SqlShim.LookupComponent+SourceColumnList">MajorProgramExternalId__c</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup No Match Output]"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Error Output].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Error Output].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sheet1$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Major / Program]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].ExternalColumns[Major / Program]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Major / Program]"
+                      name="Major / Program"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Uk Major]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].ExternalColumns[Uk Major]"
+                      length="255"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Uk Major]"
+                      name="Uk Major"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Comment]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].ExternalColumns[Comment]"
+                      length="255"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Comment]"
+                      name="Comment"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[MajorProgramExternalId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].ExternalColumns[MajorProgramExternalId]"
+                      length="255"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[MajorProgramExternalId]"
+                      name="MajorProgramExternalId"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].ExternalColumns[Major / Program]"
+                      dataType="r8"
+                      name="Major / Program" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].ExternalColumns[Uk Major]"
+                      dataType="wstr"
+                      length="255"
+                      name="Uk Major" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].ExternalColumns[Comment]"
+                      dataType="wstr"
+                      length="255"
+                      name="Comment" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].ExternalColumns[MajorProgramExternalId]"
+                      dataType="wstr"
+                      length="255"
+                      name="MajorProgramExternalId" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[MajorProgramExternalId]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[MajorProgramExternalId]"
+                      name="MajorProgramExternalId" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[Major / Program]"
+                      dataType="r8"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[Major / Program]"
+                      name="Major / Program" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[Uk Major]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[Uk Major]"
+                      name="Uk Major" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[Comment]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[Comment]"
+                      name="Comment" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast.Outputs[Multicast Output 3]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast.Outputs[Multicast Output 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 1"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast 1">
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 1.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 1.Outputs[Multicast Output 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 1.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 2"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast 2">
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 2.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 2.Outputs[Multicast Output 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 2.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject"
+              componentClassID="Microsoft.ManagedComponentHost"
+              description="Loads or modifies data into an object of the Salesforce."
+              name="PushMajorProgramToSFObject"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Null"
+                  name="DesignObject"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="The name of the CRM object to copy data into."
+                  name="ObjectName"
+                  typeConverter="Devart.SSIS.Common.Design.TablesListConverter">MajorDecoder__c</property>
+                <property
+                  dataType="System.Int32"
+                  description="Destination action"
+                  name="Action"
+                  typeConverter="Devart.SSIS.SqlShim.DestinationAction">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The max number of records loaded in one batch. Ignored for some cloud sources."
+                  name="BatchSize">5000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the max size of local buffer."
+                  name="BufferSize">10485760</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies external identifier field."
+                  expressionType="Notify"
+                  name="ExternalId"
+                  typeConverter="Devart.SSIS.Salesforce.SalesforceDestination+ExternalIdsList">MajorProgramExternalId__c</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use Bulk API or SOAP API."
+                  name="UseBulkApi">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether multiple batches associated with a bulk load operation are processed by Salesforce in parallel or one at a time. The default is true."
+                  name="ParallelBatchProcessing">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the ID of a specific assignment rule to run for the Case or Lead."
+                  name="Assignment Rule Id" />
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Devart.SSIS.Salesforce.SalesforceDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Connections[SalesforceConnectionManager]"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
+                  description="Devart Connection Manager for Salesforce connections"
+                  name="SalesforceConnectionManager" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input]"
+                  errorOrTruncationOperation="Insert operation"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].Columns[Uk Major]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Uk Major"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[UKY_Major__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Uk Major]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].Columns[Major / Program]"
+                      cachedDataType="r8"
+                      cachedName="Major / Program"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Major_Program__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Major / Program]" />
+                    <inputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].Columns[Comment]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Comment"
+                      externalMetadataColumnId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Comment__c]"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output].Columns[Comment]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[OwnerId]"
+                      dataType="wstr"
+                      length="18"
+                      name="OwnerId" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[IsDeleted]"
+                      dataType="bool"
+                      name="IsDeleted" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="80"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[CreatedById]"
+                      dataType="wstr"
+                      length="18"
+                      name="CreatedById" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastModifiedById]"
+                      dataType="wstr"
+                      length="18"
+                      name="LastModifiedById" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[SystemModstamp]"
+                      dataType="dbTimeStamp"
+                      name="SystemModstamp" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastActivityDate]"
+                      dataType="dbDate"
+                      name="LastActivityDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastViewedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastViewedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[LastReferencedDate]"
+                      dataType="dbTimeStamp"
+                      name="LastReferencedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Major_Program__c]"
+                      dataType="wstr"
+                      length="150"
+                      name="Major_Program__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[UKY_Major__c]"
+                      dataType="wstr"
+                      length="255"
+                      name="UKY_Major__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[Comment__c]"
+                      dataType="wstr"
+                      length="50"
+                      name="Comment__c" />
+                    <externalMetadataColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input].ExternalColumns[MajorProgramExternalId__c]"
+                      dataType="wstr"
+                      length="30"
+                      name="MajorProgramExternalId__c" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Error Output"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[Error Output].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[RecordId Output]"
+                  exclusionGroup="1"
+                  name="RecordId Output"
+                  synchronousInputId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[RecordId Output].Columns[Id]"
+                      dataType="wstr"
+                      length="18"
+                      lineageId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[RecordId Output].Columns[Id]"
+                      name="Id" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Data Conversion Output]"
+              endId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Error Output]"
+              endId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 1.Inputs[Multicast Input 1]"
+              name="Error Output"
+              startId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Outputs[Error Output]" />
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Excel Source Output]"
+              endId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast.Inputs[Multicast Input 1]"
+              name="Excel Source Output"
+              startId="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Lookup Match Output]"
+              endId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 2.Inputs[Multicast Input 1]"
+              name="Lookup Match Output"
+              startId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Lookup No Match Output]"
+              endId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Inputs[input]"
+              name="Lookup No Match Output"
+              startId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Multicast Output 3]"
+              endId="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion.Inputs[Data Conversion Input]"
+              name="Multicast Output 3"
+              startId="Package\Update Majors to UKY Major Mapping decoder 1\Multicast.Outputs[Multicast Output 3]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="296,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder"
+          TopLeft="53,70" />
+        <NodeLayout
+          Size="306,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder 1"
+          TopLeft="57,179" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Update Majors to UKY Major Mapping decoder">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder\Multicast"
+          TopLeft="90,185" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject"
+          TopLeft="85,265" />
+        <NodeLayout
+          Size="212,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertSuccess"
+          TopLeft="40,371" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder\MajorDecoderUpsertFail"
+          TopLeft="336,372" />
+        <NodeLayout
+          Size="217,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder\PullMajorProgramDecoderFile"
+          TopLeft="83,98" />
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder.Paths[RecordId Output]"
+          TopLeft="160.333333333333,307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-14.3333333333333,64"
+              Start="0,0"
+              End="-14.3333333333333,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.8747763864043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.8747763864043"
+                    Point2="0,25.8747763864043"
+                    Point3="-4,25.8747763864043" />
+                  <mssgle:LineSegment
+                    End="-10.3333333333333,25.8747763864043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-10.3333333333333,25.8747763864043"
+                    Point2="-14.3333333333333,25.8747763864043"
+                    Point3="-14.3333333333333,29.8747763864043" />
+                  <mssgle:LineSegment
+                    End="-14.3333333333333,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder.Paths[Multicast Output 1]"
+          TopLeft="150,227">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46,38"
+              Start="0,0"
+              End="46,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="4,19" />
+                  <mssgle:LineSegment
+                    End="42,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="42,19"
+                    Point2="46,19"
+                    Point3="46,23" />
+                  <mssgle:LineSegment
+                    End="46,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder.Paths[Flat File Source Output]"
+          TopLeft="191.5,140">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-41.5,45"
+              Start="0,0"
+              End="-41.5,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="-4,22.5" />
+                  <mssgle:LineSegment
+                    End="-37.5,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-37.5,22.5"
+                    Point2="-41.5,22.5"
+                    Point3="-41.5,26.5" />
+                  <mssgle:LineSegment
+                    End="-41.5,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder.Paths[Error Output]"
+          TopLeft="231.666666666667,307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="199.833333333333,65"
+              Start="0,0"
+              End="199.833333333333,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2790697674419" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2790697674419"
+                    Point2="0,26.2790697674419"
+                    Point3="4,26.2790697674419" />
+                  <mssgle:LineSegment
+                    End="195.833333333333,26.2790697674419" />
+                  <mssgle:CubicBezierSegment
+                    Point1="195.833333333333,26.2790697674419"
+                    Point2="199.833333333333,26.2790697674419"
+                    Point3="199.833333333333,30.2790697674419" />
+                  <mssgle:LineSegment
+                    End="199.833333333333,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="71.5802799479167,31.2790697674419,56.6727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Update Majors to UKY Major Mapping decoder 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 1"
+          TopLeft="321,414" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup"
+          TopLeft="321,184" />
+        <NodeLayout
+          Size="120,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder 1\Multicast"
+          TopLeft="91,184" />
+        <NodeLayout
+          Size="222,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject"
+          TopLeft="318,314" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source"
+          TopLeft="88,97" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder 1\Data Conversion"
+          TopLeft="88,290" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Update Majors to UKY Major Mapping decoder 1\Multicast 2"
+          TopLeft="319,101" />
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Multicast Output 3]"
+          TopLeft="151,226">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.66666666666669,64"
+              Start="0,0"
+              End="-9.66666666666669,56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.010152284264" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.010152284264"
+                    Point2="0,38.010152284264"
+                    Point3="-4,38.010152284264" />
+                  <mssgle:LineSegment
+                    End="-5.66666666666669,38.010152284264" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.66666666666669,38.010152284264"
+                    Point2="-9.66666666666669,38.010152284264"
+                    Point3="-9.66666666666669,42.010152284264" />
+                  <mssgle:LineSegment
+                    End="-9.66666666666669,56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Lookup No Match Output]"
+          TopLeft="452.333333333333,226">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-23.3333333333333,88"
+              Start="0,0"
+              End="-23.3333333333333,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6211365902293" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6211365902293"
+                    Point2="0,35.6211365902293"
+                    Point3="-4,35.6211365902293" />
+                  <mssgle:LineSegment
+                    End="-19.3333333333333,35.6211365902293" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.3333333333333,35.6211365902293"
+                    Point2="-23.3333333333333,35.6211365902293"
+                    Point3="-23.3333333333333,39.6211365902293" />
+                  <mssgle:LineSegment
+                    End="-23.3333333333333,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-76.3417057291666,40.6211365902293,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Lookup Match Output]"
+          TopLeft="420.5,184">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-36.5,-41"
+              Start="0,0"
+              End="-36.5,-33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-16.5"
+                    Point2="0,-20.5"
+                    Point3="-4,-20.5" />
+                  <mssgle:LineSegment
+                    End="-32.5,-20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-32.5,-20.5"
+                    Point2="-36.5,-20.5"
+                    Point3="-36.5,-24.5" />
+                  <mssgle:LineSegment
+                    End="-36.5,-33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-75.3100390625,-15.5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Excel Source Output]"
+          TopLeft="154.25,139">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45"
+              Start="0,0"
+              End="0,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Error Output]"
+          TopLeft="429,356">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-43,58"
+              Start="0,0"
+              End="-43,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25"
+                    Point2="0,29"
+                    Point3="-4,29" />
+                  <mssgle:LineSegment
+                    End="-39,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39,29"
+                    Point2="-43,29"
+                    Point3="-43,33" />
+                  <mssgle:LineSegment
+                    End="-43,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-58.7050390625,34,56.6727734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Update Majors to UKY Major Mapping decoder 1.Paths[Data Conversion Output]"
+          TopLeft="190.666666666667,290">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="198,-64"
+              Start="0,0"
+              End="198,-56.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-28.0866662467721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-28.0866662467721"
+                    Point2="0,-32.0866662467721"
+                    Point3="4,-32.0866662467721" />
+                  <mssgle:LineSegment
+                    End="194,-32.0866662467721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="194,-32.0866662467721"
+                    Point2="198,-32.0866662467721"
+                    Point3="198,-36.0866662467721" />
+                  <mssgle:LineSegment
+                    End="198,-56.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Update Majors to UKY Major Mapping decoder 1\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

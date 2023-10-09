@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ppa299@fullcopy"
+  DTS:DTSID="{0CAD1678-4760-4342-BE2B-75F19C905F03}"
+  DTS:CreationName="DevartSalesforce">
+  <DTS:ObjectData>
+    <SalesforceConnectionManager>
+      <ConnectionString>Max Pool Size=1000;Connection Timeout=60;Default Command Timeout=60;Host=test.salesforce.com;User Id=ppa299@uky.edu.fullcopy</ConnectionString>
+      <Password
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxB8U4GNpjkSmBgk8Bj0FfQAAAAACAAAAAAADZgAAwAAAABAAAABu8is07ygPzo4FzvCBNiaeAAAAAASAAACgAAAAEAAAAFDyWmLlTAiQ16gQqzY+fQM4AAAAYmCDF/YEWcqo7+cfLCSCwHB7iL4zoVKxa9QbqQxTrnEbZO92+bAw6pjFxFHgfMY6CnskPMDj0P8UAAAA5Ay8oXBGv4RwXYDq1dbd5x04YBs=</Password>
+      <SecurityToken
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxB8U4GNpjkSmBgk8Bj0FfQAAAAACAAAAAAADZgAAwAAAABAAAAChkCxD9Ih2hPRn21jQ/OtjAAAAAASAAACgAAAAEAAAADJ8vmxmyDPaPLSJnvroI01IAAAAbUTMsqvgPQQ4rGhj6UFgHPcVzZ8Y0UUaNi+qC4LC71MdL1IF1PBcdg9PUHmg2PdX4Z6Vdezh3i+KXTjjOb2+qByR/JX9Q+njFAAAADY9J8huHAfo9VR1MKQiCSTLkoRg</SecurityToken>
+    </SalesforceConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

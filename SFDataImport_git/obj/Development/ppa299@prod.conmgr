@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ppa299@prod"
+  DTS:DTSID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}"
+  DTS:CreationName="DevartSalesforce">
+  <DTS:ObjectData>
+    <SalesforceConnectionManager>
+      <ConnectionString>Max Pool Size=1000;Host=login.salesforce.com;User Id=ppa299@uky.edu</ConnectionString>
+      <Password
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxB8U4GNpjkSmBgk8Bj0FfQAAAAACAAAAAAADZgAAwAAAABAAAAA8b3sEutGJJc/24gU2C6MoAAAAAASAAACgAAAAEAAAALUeFXXaqyDmkgNqiwVasWs4AAAAF+WtLMed2uRbu4tH/b7qCkxl2jmFhN0SHOVWKQGHqYJpHiFRXfQsP+FR2K8datNBwRjKohjHtk0UAAAAb6e9BrA1dmUunv7YKa0S1WjcvVc=</Password>
+      <SecurityToken
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxB8U4GNpjkSmBgk8Bj0FfQAAAAACAAAAAAADZgAAwAAAABAAAAAHdmcoev2rsKM16N0vUVOkAAAAAASAAACgAAAAEAAAANv6XJJFSesmmbGakCcvqclIAAAA34CWHMRpFlov8QUorJECwGrcY9yWQwzvQCxjn6/rIU+HrcJxtGPgJ/yIhl2aU8QwCCdD2VnBT5gEqoXy87jwXRF7DLIGXRv6FAAAAIRO3plY3P3cmRCRBC5ZtVkblIOO</SecurityToken>
+    </SalesforceConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

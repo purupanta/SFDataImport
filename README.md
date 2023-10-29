@@ -1,4 +1,4 @@
-# SFDataImport (Underdevelopment... please check back)
+# SFDataImport
 
 
 <b>Data preparations mapping and pipeline design:</b>

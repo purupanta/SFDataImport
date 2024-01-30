@@ -36,10 +36,10 @@
           <ConnectionString>Host=login.salesforce.com;User Id=ppa299@uky.edu</ConnectionString>
           <Password
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxB8U4GNpjkSmBgk8Bj0FfQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADR6IAT1WYhI6atH71tpDsaAAAAAASAAACgAAAAEAAAAKTS6RqbidqhuHqIP4BHtw4gAAAAww/rfe5e85S5A0SUHCjjwi2r66zKjnlk071iEHDuxVwUAAAAbrIpogH9GAIkn508B4SpTc7R0P8</Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKhBMQYIaCEa0pGsohdf26AAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADGK+vd02PPZe9faP+SW93NAAAAAASAAACgAAAAEAAAAP/UXoZDZ7A24hC6KiTdZ9sgAAAA8iR9943HzXqSnlU3vKGdXf/JlXl2wgCT51votngnk1AUAAAAjaxbT+kDy2KGHxVpnLRxG4+n9kE</Password>
           <SecurityToken
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxB8U4GNpjkSmBgk8Bj0FfQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAANM6jP2sV8arwHw3nYDz8CAAAAAASAAACgAAAAEAAAAHSUy58WS2WqUGYCzZ3R/0Q4AAAAdfESubEGRhcVSATu3XrJ6MHLLr+E4KoPJx/bV/98j4UEUWWH1kHoxpsToN4h9sqIujFDt3MU7t4UAAAA+tvylN+d50F40MnZi/C8d7JUQIs</SecurityToken>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKhBMQYIaCEa0pGsohdf26AAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACHBkFrB1g4g6Nzyl2Ij5gbAAAAAASAAACgAAAAEAAAACyvp6NfpFGk28+5tMhLT8A4AAAAo2IuZz473qs0LootF4ceUbUf+ojUkiouX26BwUrQ8SkAafy3RTO0Ei+4gbxCjU+DzlDvUtB4x/oUAAAA5eLW9WY6LyIZhFsytgnyNPTOZxo</SecurityToken>
         </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -72,7 +72,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="SendDate">
       <DTS:VariableValue
-        DTS:DataType="8">08/25/2023</DTS:VariableValue>
+        DTS:DataType="8">11/30/2023</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -92,7 +92,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="7">8/25/2023 2:59:49 PM</DTS:VariableValue>
+        DTS:DataType="7">11/30/2023 9:13:55 AM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>

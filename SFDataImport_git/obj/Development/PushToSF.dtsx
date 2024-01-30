@@ -74,7 +74,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="8">8/25/2023</DTS:VariableValue>
+        DTS:DataType="8">11/30/2023</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>

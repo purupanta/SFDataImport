@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Encoura"
   DTS:PackageType="5"
-  DTS:VersionBuild="348"
-  DTS:VersionGUID="{6F0DF530-00C1-4F33-B382-555BB22BB411}">
+  DTS:VersionBuild="347"
+  DTS:VersionGUID="{A7573E15-F298-42FE-B6D7-E3C54403C103}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3265,6 +3265,16 @@
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\Encoura\ReportPull\Fa 24 25 Prospects for EAB.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}"
+      DTS:ObjectName="sql16dev01\general.SalesforceStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql16dev01\general;Initial Catalog=SalesforceStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
@@ -3276,7 +3286,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">1220_StudentJourneyReport_20221111.xls</DTS:VariableValue>
+        DTS:DataType="8">Declared_20230828_001989_090417.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -4906,8 +4916,8 @@
               <connections>
                 <connection
                   refId="Package\Encoura\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
-                  connectionManagerRefId="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10311,8 +10321,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\EncouraNEW_Affinity\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
-                  connectionManagerRefId="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -17395,8 +17405,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Encoura_v1\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
-                  connectionManagerRefId="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -23292,8 +23302,8 @@ AAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Encoura_v1 1\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
-                  connectionManagerRefId="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -29006,8 +29016,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\Encoura_v2\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
-                  connectionManagerRefId="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -42818,8 +42828,8 @@ AAAAAAAAAAAAAAAAAA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Encoura_v2_BKUP\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                      connectionManagerID="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
-                      connectionManagerRefId="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
+                      connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                      connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>

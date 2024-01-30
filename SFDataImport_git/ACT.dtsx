@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="ACT"
   DTS:PackageType="5"
-  DTS:VersionBuild="58"
-  DTS:VersionGUID="{9CBDF00C-56CA-461D-8196-9535E7B40FC6}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{1BD7F068-43F2-49DD-BDD2-9F9B86665635}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,6 +26,16 @@
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\ACT\20211115_Prospects_001989_SO-00200129_UK__23s_-__25s_11_15_21.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}"
+      DTS:ObjectName="sql16dev01\general.SalesforceStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql16dev01\general;Initial Catalog=SalesforceStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
@@ -37,7 +47,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">1220_StudentJourneyReport_20221111.xls</DTS:VariableValue>
+        DTS:DataType="8">2021-11-23-1008_university-of-kentucky_RaiseMe.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1707,8 +1717,8 @@
               <connections>
                 <connection
                   refId="Package\ACT\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
-                  connectionManagerRefId="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4772,7 +4782,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ACT\Insert ESData_OriginalStaging">
+    design-time-name="Package\ACT\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4785,7 +4795,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\ACT\Excel Source">
+    design-time-name="Package\ACT\Insert ESData_OriginalStaging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

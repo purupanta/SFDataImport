@@ -57,7 +57,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">College Board_Top 6 States_08102023.xlsx</DTS:VariableValue>
+        DTS:DataType="8">10.20.23 Inquiry Upload.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -88,7 +88,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="8">08252023</DTS:VariableValue>
+        DTS:DataType="8">11302023</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -99,7 +99,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate0">
       <DTS:VariableValue
-        DTS:DataType="8">08-25-2023</DTS:VariableValue>
+        DTS:DataType="8">11-30-2023</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -4208,7 +4208,7 @@
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Last Name"
-                      lineageId="Package\Data Flow Task 1\4329:invalid" />
+                      lineageId="Package\Data Flow Task 1\4296:invalid" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4228,7 +4228,7 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Data Flow Task 1\4329:invalid}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Fall 21 Additional Prospects 112520_xlsx.Outputs[Excel Source Output].Columns[Email]}) &amp;&amp; [TRIM](#{Package\Data Flow Task 1\4329:invalid}) != "" &amp;&amp; [TRIM](#{Package\Data Flow Task 1\Fall 21 Additional Prospects 112520_xlsx.Outputs[Excel Source Output].Columns[Email]}) != ""</property>
+                      name="Expression">![ISNULL](#{Package\Data Flow Task 1\4296:invalid}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Fall 21 Additional Prospects 112520_xlsx.Outputs[Excel Source Output].Columns[Email]}) &amp;&amp; [TRIM](#{Package\Data Flow Task 1\4296:invalid}) != "" &amp;&amp; [TRIM](#{Package\Data Flow Task 1\Fall 21 Additional Prospects 112520_xlsx.Outputs[Excel Source Output].Columns[Email]}) != ""</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -4300,7 +4300,7 @@
                       cachedName="Data Source"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4330:invalid"
+                      lineageId="Package\Data Flow Task 1\4297:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4308,7 +4308,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4330:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4297:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4348,7 +4348,7 @@
                       cachedName="First Name"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4331:invalid"
+                      lineageId="Package\Data Flow Task 1\4298:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4356,7 +4356,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4331:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4298:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4372,7 +4372,7 @@
                       cachedName="Last Name"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4329:invalid"
+                      lineageId="Package\Data Flow Task 1\4296:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4380,7 +4380,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4329:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4296:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4396,7 +4396,7 @@
                       cachedName="Address 1"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4332:invalid"
+                      lineageId="Package\Data Flow Task 1\4299:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4404,7 +4404,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4332:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4299:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4444,7 +4444,7 @@
                       cachedName="State Abbreviation"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4333:invalid"
+                      lineageId="Package\Data Flow Task 1\4300:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4452,7 +4452,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4333:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4300:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4468,7 +4468,7 @@
                       cachedName="Country Code Alpha"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4334:invalid"
+                      lineageId="Package\Data Flow Task 1\4301:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4476,7 +4476,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4334:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4301:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4540,7 +4540,7 @@
                       cachedName="Academic Interest 1"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4335:invalid"
+                      lineageId="Package\Data Flow Task 1\4302:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4548,7 +4548,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4335:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4302:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4564,7 +4564,7 @@
                       cachedName="Academic Interest 2"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4336:invalid"
+                      lineageId="Package\Data Flow Task 1\4303:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4572,7 +4572,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4336:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4303:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -5407,14 +5407,14 @@
                       cachedLength="255"
                       cachedName="First Name"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
-                      lineageId="Package\Data Flow Task 1\4331:invalid" />
+                      lineageId="Package\Data Flow Task 1\4298:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Last Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Last Name"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
-                      lineageId="Package\Data Flow Task 1\4329:invalid" />
+                      lineageId="Package\Data Flow Task 1\4296:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Email]"
                       cachedDataType="wstr"
@@ -5468,60 +5468,60 @@
                       cachedLength="255"
                       cachedName="Data Source"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[Source]"
-                      lineageId="Package\Data Flow Task 1\4330:invalid" />
+                      lineageId="Package\Data Flow Task 1\4297:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Encoura ID]"
                       cachedDataType="r8"
                       cachedName="Encoura ID"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[PurchaseId]"
-                      lineageId="Package\Data Flow Task 1\4337:invalid" />
+                      lineageId="Package\Data Flow Task 1\4304:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Address 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Address 1"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
-                      lineageId="Package\Data Flow Task 1\4332:invalid" />
+                      lineageId="Package\Data Flow Task 1\4299:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Zip Code]"
                       cachedDataType="r8"
                       cachedName="Zip Code"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[ZipCode]"
-                      lineageId="Package\Data Flow Task 1\4338:invalid" />
+                      lineageId="Package\Data Flow Task 1\4305:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Country Code Alpha]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Country Code Alpha"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      lineageId="Package\Data Flow Task 1\4334:invalid" />
+                      lineageId="Package\Data Flow Task 1\4301:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[State Abbreviation]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="State Abbreviation"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[State]"
-                      lineageId="Package\Data Flow Task 1\4333:invalid" />
+                      lineageId="Package\Data Flow Task 1\4300:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Graduation Year]"
                       cachedDataType="r8"
                       cachedName="Graduation Year"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[HSGraduationDate]"
-                      lineageId="Package\Data Flow Task 1\4339:invalid" />
+                      lineageId="Package\Data Flow Task 1\4306:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Academic Interest 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Academic Interest 1"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[MajorOfInterest]"
-                      lineageId="Package\Data Flow Task 1\4335:invalid" />
+                      lineageId="Package\Data Flow Task 1\4302:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Academic Interest 2]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Academic Interest 2"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[SecondaryMajorOfInterest]"
-                      lineageId="Package\Data Flow Task 1\4336:invalid" />
+                      lineageId="Package\Data Flow Task 1\4303:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[StudentType]"
                       cachedDataType="wstr"
@@ -5535,13 +5535,13 @@
                       cachedLength="50"
                       cachedName="Birth Date"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[Birthdate]"
-                      lineageId="Package\Data Flow Task 1\4340:invalid" />
+                      lineageId="Package\Data Flow Task 1\4307:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Race Ethnicity]"
                       cachedDataType="r8"
                       cachedName="Race Ethnicity"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[RaceEthnicity1]"
-                      lineageId="Package\Data Flow Task 1\4341:invalid" />
+                      lineageId="Package\Data Flow Task 1\4308:invalid" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7087,12 +7087,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Data Source"
-                      lineageId="Package\Data Flow Task 1\4330:invalid" />
+                      lineageId="Package\Data Flow Task 1\4297:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Encoura ID]"
                       cachedDataType="r8"
                       cachedName="Encoura ID"
-                      lineageId="Package\Data Flow Task 1\4337:invalid" />
+                      lineageId="Package\Data Flow Task 1\4304:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[StudentType]"
                       cachedDataType="wstr"
@@ -7104,19 +7104,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="First Name"
-                      lineageId="Package\Data Flow Task 1\4331:invalid" />
+                      lineageId="Package\Data Flow Task 1\4298:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Last Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Last Name"
-                      lineageId="Package\Data Flow Task 1\4329:invalid" />
+                      lineageId="Package\Data Flow Task 1\4296:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Address 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Address 1"
-                      lineageId="Package\Data Flow Task 1\4332:invalid" />
+                      lineageId="Package\Data Flow Task 1\4299:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[City]"
                       cachedDataType="wstr"
@@ -7128,23 +7128,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="State Abbreviation"
-                      lineageId="Package\Data Flow Task 1\4333:invalid" />
+                      lineageId="Package\Data Flow Task 1\4300:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Zip Code]"
                       cachedDataType="r8"
                       cachedName="Zip Code"
-                      lineageId="Package\Data Flow Task 1\4338:invalid" />
+                      lineageId="Package\Data Flow Task 1\4305:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[ZIP 4]"
                       cachedDataType="r8"
                       cachedName="ZIP 4"
-                      lineageId="Package\Data Flow Task 1\4342:invalid" />
+                      lineageId="Package\Data Flow Task 1\4309:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Country Code Alpha]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Country Code Alpha"
-                      lineageId="Package\Data Flow Task 1\4334:invalid" />
+                      lineageId="Package\Data Flow Task 1\4301:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Email]"
                       cachedDataType="wstr"
@@ -7156,7 +7156,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Birth Date"
-                      lineageId="Package\Data Flow Task 1\4340:invalid"
+                      lineageId="Package\Data Flow Task 1\4307:invalid"
                       usageType="readWrite" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Gender]"
@@ -7168,24 +7168,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Race Ethnicity]"
                       cachedDataType="r8"
                       cachedName="Race Ethnicity"
-                      lineageId="Package\Data Flow Task 1\4341:invalid" />
+                      lineageId="Package\Data Flow Task 1\4308:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Graduation Year]"
                       cachedDataType="r8"
                       cachedName="Graduation Year"
-                      lineageId="Package\Data Flow Task 1\4339:invalid" />
+                      lineageId="Package\Data Flow Task 1\4306:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Academic Interest 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Academic Interest 1"
-                      lineageId="Package\Data Flow Task 1\4335:invalid" />
+                      lineageId="Package\Data Flow Task 1\4302:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Academic Interest 2]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Academic Interest 2"
-                      lineageId="Package\Data Flow Task 1\4336:invalid" />
+                      lineageId="Package\Data Flow Task 1\4303:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[FileName]"
                       cachedDataType="wstr"

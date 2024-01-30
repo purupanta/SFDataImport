@@ -314,7 +314,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\FreshmanUpdateFail_2023-08-25.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\FreshmanUpdateFail_2023-11-30.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -632,7 +632,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\FreshmanUpdateSuccess_2023-08-25.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\FreshmanUpdateSuccess_2023-11-30.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -955,7 +955,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\TransferUpdateFail_2023-08-25.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\TransferUpdateFail_2023-11-30.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1281,7 +1281,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\TransferUpdateSuccess_2023-08-25.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\TransferUpdateSuccess_2023-11-30.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1635,7 +1635,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="N_DaysBackDate_LB">
       <DTS:VariableValue
-        DTS:DataType="7">6/26/2023 2:59:50 PM</DTS:VariableValue>
+        DTS:DataType="7">10/1/2023 9:13:56 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1646,7 +1646,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="N_DaysBackDate_UB">
       <DTS:VariableValue
-        DTS:DataType="7">8/25/2023 2:59:50 PM</DTS:VariableValue>
+        DTS:DataType="7">11/30/2023 9:13:56 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1657,7 +1657,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="OutputCSVFileDateTimeStamp">
       <DTS:VariableValue
-        DTS:DataType="8">_2023-08-25</DTS:VariableValue>
+        DTS:DataType="8">_2023-11-30</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1668,7 +1668,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="7">8/25/2023 2:59:50 PM</DTS:VariableValue>
+        DTS:DataType="7">11/30/2023 9:13:56 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1679,7 +1679,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="X_HrsBack">
       <DTS:VariableValue
-        DTS:DataType="7">8/25/2023 1:59:50 AM</DTS:VariableValue>
+        DTS:DataType="7">11/29/2023 8:13:56 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1690,7 +1690,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Y_HrsBack">
       <DTS:VariableValue
-        DTS:DataType="7">8/25/2023 3:59:50 AM</DTS:VariableValue>
+        DTS:DataType="7">11/29/2023 10:13:56 PM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -36299,7 +36299,7 @@ where [refTable].[Email] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\FixLastNameAndConcatId\2346:invalid};</property>
+                  name="ParameterMap">#{Package\FixLastNameAndConcatId\2219:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."

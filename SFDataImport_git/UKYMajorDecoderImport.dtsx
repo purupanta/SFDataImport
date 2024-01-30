@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="UKYMajorDecoderImport"
   DTS:PackageType="5"
-  DTS:VersionBuild="88"
-  DTS:VersionGUID="{314F1D52-A4EA-4814-A0A9-05324D3778D6}">
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{176B740A-A9EE-4013-ABD9-DB616B66DEA2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -42,7 +42,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\MajorDecoder_2023-10-09.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\MajorDecoder_2023-05-23.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -181,7 +181,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\Logfiles\MajorDecoderSuccessLog_2023-10-09.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\Logfiles\MajorDecoderSuccessLog_2023-05-23.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -211,6 +211,16 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}"
+      DTS:ObjectName="sql16dev01\general.SalesforceStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql16dev01\general;Initial Catalog=SalesforceStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -677,8 +687,8 @@
               <connections>
                 <connection
                   refId="Package\Update Majors to UKY Major Mapping decoder\PushMajorProgramToSFObject.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -1016,8 +1026,8 @@
               <connections>
                 <connection
                   refId="Package\Update Majors to UKY Major Mapping decoder 1\Devart Salesforce Lookup.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -1418,8 +1428,8 @@
               <connections>
                 <connection
                   refId="Package\Update Majors to UKY Major Mapping decoder 1\PushMajorProgramToSFObject.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>

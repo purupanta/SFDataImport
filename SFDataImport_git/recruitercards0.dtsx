@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="recruitercards0"
   DTS:PackageType="5"
-  DTS:VersionBuild="167"
-  DTS:VersionGUID="{60C454E3-D792-4810-9E1D-F57863365825}">
+  DTS:VersionBuild="166"
+  DTS:VersionGUID="{CDA46A0E-D627-4917-A7A5-F146B7A7053A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -36,6 +36,16 @@
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\recruitercard\NACAC.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}"
+      DTS:ObjectName="sql16dev01\general.SalesforceStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql16dev01\general;Initial Catalog=SalesforceStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
@@ -47,7 +57,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">1220_StudentJourneyReport_20221111.xls</DTS:VariableValue>
+        DTS:DataType="8">NJ Inquiry Strive Scan Fall 2022.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -78,7 +88,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="8">10092023</DTS:VariableValue>
+        DTS:DataType="8">04182023</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -89,7 +99,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate0">
       <DTS:VariableValue
-        DTS:DataType="8">10-09-2023</DTS:VariableValue>
+        DTS:DataType="8">04-18-2023</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -162,8 +172,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Devart Salesforce Destination.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -632,8 +642,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Devart Salesforce Destination 1.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -2324,8 +2334,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Devart Salesforce Lookup.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -2529,8 +2539,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4198,7 +4208,7 @@
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Last Name"
-                      lineageId="Package\Data Flow Task 1\4335:invalid" />
+                      lineageId="Package\Data Flow Task 1\747:invalid" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4218,7 +4228,7 @@
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Data Flow Task 1\4335:invalid}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Fall 21 Additional Prospects 112520_xlsx.Outputs[Excel Source Output].Columns[Email]}) &amp;&amp; [TRIM](#{Package\Data Flow Task 1\4335:invalid}) != "" &amp;&amp; [TRIM](#{Package\Data Flow Task 1\Fall 21 Additional Prospects 112520_xlsx.Outputs[Excel Source Output].Columns[Email]}) != ""</property>
+                      name="Expression">![ISNULL](#{Package\Data Flow Task 1\747:invalid}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task 1\Fall 21 Additional Prospects 112520_xlsx.Outputs[Excel Source Output].Columns[Email]}) &amp;&amp; [TRIM](#{Package\Data Flow Task 1\747:invalid}) != "" &amp;&amp; [TRIM](#{Package\Data Flow Task 1\Fall 21 Additional Prospects 112520_xlsx.Outputs[Excel Source Output].Columns[Email]}) != ""</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -4290,7 +4300,7 @@
                       cachedName="Data Source"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4336:invalid"
+                      lineageId="Package\Data Flow Task 1\748:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4298,7 +4308,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4336:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\748:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4338,7 +4348,7 @@
                       cachedName="First Name"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4337:invalid"
+                      lineageId="Package\Data Flow Task 1\749:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4346,7 +4356,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4337:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\749:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4362,7 +4372,7 @@
                       cachedName="Last Name"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4335:invalid"
+                      lineageId="Package\Data Flow Task 1\747:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4370,7 +4380,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4335:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\747:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4386,7 +4396,7 @@
                       cachedName="Address 1"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4338:invalid"
+                      lineageId="Package\Data Flow Task 1\750:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4394,7 +4404,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4338:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\750:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4434,7 +4444,7 @@
                       cachedName="State Abbreviation"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4339:invalid"
+                      lineageId="Package\Data Flow Task 1\751:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4442,7 +4452,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4339:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\751:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4458,7 +4468,7 @@
                       cachedName="Country Code Alpha"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4340:invalid"
+                      lineageId="Package\Data Flow Task 1\752:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4466,7 +4476,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4340:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\752:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4530,7 +4540,7 @@
                       cachedName="Academic Interest 1"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4341:invalid"
+                      lineageId="Package\Data Flow Task 1\753:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4538,7 +4548,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4341:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\753:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -4554,7 +4564,7 @@
                       cachedName="Academic Interest 2"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task 1\4342:invalid"
+                      lineageId="Package\Data Flow Task 1\754:invalid"
                       truncationRowDisposition="FailComponent"
                       usageType="readWrite">
                       <properties>
@@ -4562,7 +4572,7 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[TRIM](#{Package\Data Flow Task 1\4342:invalid})</property>
+                          name="Expression">[TRIM](#{Package\Data Flow Task 1\754:invalid})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
@@ -5371,8 +5381,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
-                  connectionManagerRefId="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5397,14 +5407,14 @@
                       cachedLength="255"
                       cachedName="First Name"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[FirstName]"
-                      lineageId="Package\Data Flow Task 1\4337:invalid" />
+                      lineageId="Package\Data Flow Task 1\749:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Last Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Last Name"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[LastName]"
-                      lineageId="Package\Data Flow Task 1\4335:invalid" />
+                      lineageId="Package\Data Flow Task 1\747:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Email]"
                       cachedDataType="wstr"
@@ -5458,60 +5468,60 @@
                       cachedLength="255"
                       cachedName="Data Source"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[Source]"
-                      lineageId="Package\Data Flow Task 1\4336:invalid" />
+                      lineageId="Package\Data Flow Task 1\748:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Encoura ID]"
                       cachedDataType="r8"
                       cachedName="Encoura ID"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[PurchaseId]"
-                      lineageId="Package\Data Flow Task 1\4343:invalid" />
+                      lineageId="Package\Data Flow Task 1\755:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Address 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Address 1"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[AddressLine1]"
-                      lineageId="Package\Data Flow Task 1\4338:invalid" />
+                      lineageId="Package\Data Flow Task 1\750:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Zip Code]"
                       cachedDataType="r8"
                       cachedName="Zip Code"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[ZipCode]"
-                      lineageId="Package\Data Flow Task 1\4344:invalid" />
+                      lineageId="Package\Data Flow Task 1\756:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Country Code Alpha]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Country Code Alpha"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
-                      lineageId="Package\Data Flow Task 1\4340:invalid" />
+                      lineageId="Package\Data Flow Task 1\752:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[State Abbreviation]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="State Abbreviation"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[State]"
-                      lineageId="Package\Data Flow Task 1\4339:invalid" />
+                      lineageId="Package\Data Flow Task 1\751:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Graduation Year]"
                       cachedDataType="r8"
                       cachedName="Graduation Year"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[HSGraduationDate]"
-                      lineageId="Package\Data Flow Task 1\4345:invalid" />
+                      lineageId="Package\Data Flow Task 1\757:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Academic Interest 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Academic Interest 1"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[MajorOfInterest]"
-                      lineageId="Package\Data Flow Task 1\4341:invalid" />
+                      lineageId="Package\Data Flow Task 1\753:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Academic Interest 2]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Academic Interest 2"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[SecondaryMajorOfInterest]"
-                      lineageId="Package\Data Flow Task 1\4342:invalid" />
+                      lineageId="Package\Data Flow Task 1\754:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[StudentType]"
                       cachedDataType="wstr"
@@ -5525,13 +5535,13 @@
                       cachedLength="50"
                       cachedName="Birth Date"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[Birthdate]"
-                      lineageId="Package\Data Flow Task 1\4346:invalid" />
+                      lineageId="Package\Data Flow Task 1\758:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].Columns[Race Ethnicity]"
                       cachedDataType="r8"
                       cachedName="Race Ethnicity"
                       externalMetadataColumnId="Package\Data Flow Task 1\Insert ESData_OriginalStaging.Inputs[OLE DB Destination Input].ExternalColumns[RaceEthnicity1]"
-                      lineageId="Package\Data Flow Task 1\4347:invalid" />
+                      lineageId="Package\Data Flow Task 1\759:invalid" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -7077,12 +7087,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Data Source"
-                      lineageId="Package\Data Flow Task 1\4336:invalid" />
+                      lineageId="Package\Data Flow Task 1\748:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Encoura ID]"
                       cachedDataType="r8"
                       cachedName="Encoura ID"
-                      lineageId="Package\Data Flow Task 1\4343:invalid" />
+                      lineageId="Package\Data Flow Task 1\755:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[StudentType]"
                       cachedDataType="wstr"
@@ -7094,19 +7104,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="First Name"
-                      lineageId="Package\Data Flow Task 1\4337:invalid" />
+                      lineageId="Package\Data Flow Task 1\749:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Last Name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Last Name"
-                      lineageId="Package\Data Flow Task 1\4335:invalid" />
+                      lineageId="Package\Data Flow Task 1\747:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Address 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Address 1"
-                      lineageId="Package\Data Flow Task 1\4338:invalid" />
+                      lineageId="Package\Data Flow Task 1\750:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[City]"
                       cachedDataType="wstr"
@@ -7118,23 +7128,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="State Abbreviation"
-                      lineageId="Package\Data Flow Task 1\4339:invalid" />
+                      lineageId="Package\Data Flow Task 1\751:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Zip Code]"
                       cachedDataType="r8"
                       cachedName="Zip Code"
-                      lineageId="Package\Data Flow Task 1\4344:invalid" />
+                      lineageId="Package\Data Flow Task 1\756:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[ZIP 4]"
                       cachedDataType="r8"
                       cachedName="ZIP 4"
-                      lineageId="Package\Data Flow Task 1\4348:invalid" />
+                      lineageId="Package\Data Flow Task 1\760:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Country Code Alpha]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Country Code Alpha"
-                      lineageId="Package\Data Flow Task 1\4340:invalid" />
+                      lineageId="Package\Data Flow Task 1\752:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Email]"
                       cachedDataType="wstr"
@@ -7146,7 +7156,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Birth Date"
-                      lineageId="Package\Data Flow Task 1\4346:invalid"
+                      lineageId="Package\Data Flow Task 1\758:invalid"
                       usageType="readWrite" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Gender]"
@@ -7158,24 +7168,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Race Ethnicity]"
                       cachedDataType="r8"
                       cachedName="Race Ethnicity"
-                      lineageId="Package\Data Flow Task 1\4347:invalid" />
+                      lineageId="Package\Data Flow Task 1\759:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Graduation Year]"
                       cachedDataType="r8"
                       cachedName="Graduation Year"
-                      lineageId="Package\Data Flow Task 1\4345:invalid" />
+                      lineageId="Package\Data Flow Task 1\757:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Academic Interest 1]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Academic Interest 1"
-                      lineageId="Package\Data Flow Task 1\4341:invalid" />
+                      lineageId="Package\Data Flow Task 1\753:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[Academic Interest 2]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="Academic Interest 2"
-                      lineageId="Package\Data Flow Task 1\4342:invalid" />
+                      lineageId="Package\Data Flow Task 1\754:invalid" />
                     <inputColumn
                       refId="Package\Data Flow Task 1\Script Component (Birthday Format).Inputs[Input 0].Columns[FileName]"
                       cachedDataType="wstr"
@@ -8117,8 +8127,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\NACAC\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -12668,8 +12678,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\RecruiterCardLoad\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
-                  connectionManagerRefId="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -14943,8 +14953,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\REVERTING THE FILE DCandMarylandInviteList\Devart Salesforce Destination.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -15349,8 +15359,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\REVERTING THE FILE DCandMarylandInviteList\Devart Salesforce Destination 1.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -16779,8 +16789,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\REVERTING THE FILE DCandMarylandInviteList\Devart Salesforce Lookup.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -16997,8 +17007,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\REVERTING THE FILE DCandMarylandInviteList\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>

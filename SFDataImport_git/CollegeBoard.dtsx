@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="CollegeBoard"
   DTS:PackageType="5"
-  DTS:VersionBuild="1321"
-  DTS:VersionGUID="{C548A167-46B7-490B-89BC-84C69584BB21}">
+  DTS:VersionBuild="1320"
+  DTS:VersionGUID="{F8F18B58-84B7-4E36-BE23-F3E62F519DA6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -915,6 +915,16 @@
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CollegeBoard\IMC 091321.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}"
+      DTS:ObjectName="sql16dev01\general.SalesforceStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql16dev01\general;Initial Catalog=SalesforceStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
@@ -926,7 +936,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">1220_StudentJourneyReport_20221111.xls</DTS:VariableValue>
+        DTS:DataType="8">College Board_Top 6 States_08102023.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -959,7 +969,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="CurrBatchId">
       <DTS:VariableValue
-        DTS:DataType="8">B1</DTS:VariableValue>
+        DTS:DataType="8">B6</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1003,7 +1013,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="8">10092023</DTS:VariableValue>
+        DTS:DataType="8">08252023</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1014,7 +1024,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate0">
       <DTS:VariableValue
-        DTS:DataType="8">10-09-2023</DTS:VariableValue>
+        DTS:DataType="8">08-25-2023</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -4952,8 +4962,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\CollegeBoardLarge_v1_csv\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
-                  connectionManagerRefId="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -11084,8 +11094,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayEl
               <connections>
                 <connection
                   refId="Package\CollegeBoardLarge_v1_xlsx\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
-                  connectionManagerRefId="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -19714,8 +19724,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\CollegeBoard_CLEP Search August 2021\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
-                  connectionManagerRefId="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -24200,8 +24210,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\CollegeBoard_IMC 091321\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
-                  connectionManagerRefId="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -28894,8 +28904,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\CollegeBoard_Normal\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
-                  connectionManagerRefId="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -33469,8 +33479,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\For Big Files\CollegeBoardLarge\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                      connectionManagerID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
-                      connectionManagerRefId="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
+                      connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                      connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -36547,8 +36557,8 @@ where [refTable].[Email] = ?</property>
                   <connections>
                     <connection
                       refId="Package\For Big Files\LookForAlreadyDone\Lookup.Connections[OleDbConnection]"
-                      connectionManagerID="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
-                      connectionManagerRefId="{C58E2062-6795-4F1F-B2FA-DC34BFBE32C3}:invalid"
+                      connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                      connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -36762,8 +36772,8 @@ WHERE [Id] = ?</property>
                   <connections>
                     <connection
                       refId="Package\For Big Files\LookForAlreadyDone\OLE DB Command.Connections[OleDbConnection]"
-                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                      connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -36982,8 +36992,8 @@ SELECT [Id]
                   <connections>
                     <connection
                       refId="Package\For Big Files\LookForAlreadyDone\Pull from ESData_OriginalStaging.Connections[OleDbConnection]"
-                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                      connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -38906,8 +38916,8 @@ WHERE [Id] = ?</property>
                   <connections>
                     <connection
                       refId="Package\For Big Files\SetNoProcess\OLE DB Command.Connections[OleDbConnection]"
-                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                      connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -39044,8 +39054,8 @@ WHERE [Id] = ?</property>
                   <connections>
                     <connection
                       refId="Package\For Big Files\SetNoProcess\Pull from ESData_OriginalStaging.Connections[OleDbConnection]"
-                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                      connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -43346,8 +43356,8 @@ WHERE ( [Id] = ? )</property>
               <connections>
                 <connection
                   refId="Package\UpdateFinal\OLE DB Command_Update_ESDataFinal.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -43525,8 +43535,8 @@ WHERE BatchId = ?</property>
               <connections>
                 <connection
                   refId="Package\UpdateFinal\Pull ESData_Final.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -50189,8 +50199,8 @@ WHERE ( [Id] = ? )</property>
               <connections>
                 <connection
                   refId="Package\UpdateOriginal\OLE DB Command_Update_ESDataOriginal.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -50368,8 +50378,8 @@ WHERE BatchId = ?</property>
               <connections>
                 <connection
                   refId="Package\UpdateOriginal\Pull ESData_Original.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -51887,8 +51897,8 @@ WHERE ( [Id] = ? )</property>
               <connections>
                 <connection
                   refId="Package\UpdateStaging\OLE DB Command_Update_ESDataFinal.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -52066,8 +52076,8 @@ WHERE BatchId = ?</property>
               <connections>
                 <connection
                   refId="Package\UpdateStaging\Pull ESData_Final.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -53504,6 +53514,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Id="Package\CollegeBoard_Normal"
           TopLeft="52,38" />
         <NodeLayout
+          Size="148,42"
+          Id="Package\UpdateStaging"
+          TopLeft="345,136" />
+        <NodeLayout
           Size="167,42"
           Id="Package\For Big Files\CollegeBoardLarge"
           TopLeft="27,31.5" />
@@ -53591,18 +53605,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           Id="Package\For Big Files"
           TopLeft="850,32" />
         <NodeLayout
-          Size="135,42"
-          Id="Package\UpdateFinal"
-          TopLeft="358.5,317" />
-        <NodeLayout
-          Size="149,42"
-          Id="Package\UpdateOriginal"
-          TopLeft="348,218" />
-        <NodeLayout
-          Size="148,42"
-          Id="Package\UpdateStaging"
-          TopLeft="345,136" />
-        <NodeLayout
           Size="205,42"
           Id="Package\CollegeBoardLarge_v1_csv"
           TopLeft="5.5,5.5" />
@@ -53646,6 +53648,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <s:String>Package\CollegeBoard_IMC 091321</s:String>
           </GroupLayout.ChildrenIds>
         </GroupLayout>
+        <NodeLayout
+          Size="149,42"
+          Id="Package\UpdateOriginal"
+          TopLeft="348,218" />
+        <NodeLayout
+          Size="135,42"
+          Id="Package\UpdateFinal"
+          TopLeft="358.5,317" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -54883,6 +54893,173 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\UpdateStaging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\UpdateStaging\Script Component"
+          TopLeft="378,29" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\UpdateStaging\Pull ESData_Final"
+          TopLeft="68,33" />
+        <NodeLayout
+          Size="267,42"
+          Id="Package\UpdateStaging\OLE DB Command_Update_ESDataFinal"
+          TopLeft="261,144" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\UpdateStaging\Multicast 3"
+          TopLeft="574,260" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\UpdateStaging\Multicast 2"
+          TopLeft="43,248" />
+        <EdgeLayout
+          Id="Package\UpdateStaging.Paths[Output 0]"
+          TopLeft="459.5,71">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-65,73"
+              Start="0,0"
+              End="-65,65.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.5"
+                    Point2="0,36.5"
+                    Point3="-4,36.5" />
+                  <mssgle:LineSegment
+                    End="-61,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-61,36.5"
+                    Point2="-65,36.5"
+                    Point3="-65,40.5" />
+                  <mssgle:LineSegment
+                    End="-65,65.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\UpdateStaging.Paths[OLE DB Source Output]"
+          TopLeft="229,52">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="149,0"
+              Start="0,0"
+              End="141.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="141.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\UpdateStaging.Paths[OLE DB Command Output]"
+          TopLeft="351.333333333333,186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-243.333333333333,62"
+              Start="0,0"
+              End="-243.333333333333,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.0215934475056" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.0215934475056"
+                    Point2="0,25.0215934475056"
+                    Point3="-4,25.0215934475056" />
+                  <mssgle:LineSegment
+                    End="-239.333333333333,25.0215934475056" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-239.333333333333,25.0215934475056"
+                    Point2="-243.333333333333,25.0215934475056"
+                    Point3="-243.333333333333,29.0215934475056" />
+                  <mssgle:LineSegment
+                    End="-243.333333333333,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\UpdateStaging.Paths[OLE DB Command Error Output]"
+          TopLeft="437.666666666667,186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="201.333333333333,74"
+              Start="0,0"
+              End="201.333333333333,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.8644825018615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.8644825018615"
+                    Point2="0,29.8644825018615"
+                    Point3="4,29.8644825018615" />
+                  <mssgle:LineSegment
+                    End="197.333333333333,29.8644825018615" />
+                  <mssgle:CubicBezierSegment
+                    Point1="197.333333333333,29.8644825018615"
+                    Point2="201.333333333333,29.8644825018615"
+                    Point3="201.333333333333,33.8644825018615" />
+                  <mssgle:LineSegment
+                    End="201.333333333333,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="29.9577604166665,34.8644825018615,141.4178125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\UpdateStaging\Pull ESData_Final">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\For Big Files\CollegeBoardLarge">
     <LayoutInfo>
       <GraphLayout
@@ -55605,173 +55782,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\UpdateFinal">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="163,42"
-          Id="Package\UpdateFinal\Script Component"
-          TopLeft="378,29" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\UpdateFinal\Multicast 3"
-          TopLeft="574,260" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\UpdateFinal\Multicast 2"
-          TopLeft="43,248" />
-        <NodeLayout
-          Size="267,42"
-          Id="Package\UpdateFinal\OLE DB Command_Update_ESDataFinal"
-          TopLeft="261,144" />
-        <EdgeLayout
-          Id="Package\UpdateFinal.Paths[Output 0]"
-          TopLeft="459.5,71">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-65,73"
-              Start="0,0"
-              End="-65,65.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.5"
-                    Point2="0,36.5"
-                    Point3="-4,36.5" />
-                  <mssgle:LineSegment
-                    End="-61,36.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-61,36.5"
-                    Point2="-65,36.5"
-                    Point3="-65,40.5" />
-                  <mssgle:LineSegment
-                    End="-65,65.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\UpdateFinal.Paths[OLE DB Command Output]"
-          TopLeft="351.333333333333,186">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-243.333333333333,62"
-              Start="0,0"
-              End="-243.333333333333,54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.0215934475056" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.0215934475056"
-                    Point2="0,25.0215934475056"
-                    Point3="-4,25.0215934475056" />
-                  <mssgle:LineSegment
-                    End="-239.333333333333,25.0215934475056" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-239.333333333333,25.0215934475056"
-                    Point2="-243.333333333333,25.0215934475056"
-                    Point3="-243.333333333333,29.0215934475056" />
-                  <mssgle:LineSegment
-                    End="-243.333333333333,54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\UpdateFinal.Paths[OLE DB Command Error Output]"
-          TopLeft="437.666666666667,186">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="201.333333333333,74"
-              Start="0,0"
-              End="201.333333333333,66.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.8644825018615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.8644825018615"
-                    Point2="0,29.8644825018615"
-                    Point3="4,29.8644825018615" />
-                  <mssgle:LineSegment
-                    End="197.333333333333,29.8644825018615" />
-                  <mssgle:CubicBezierSegment
-                    Point1="197.333333333333,29.8644825018615"
-                    Point2="201.333333333333,29.8644825018615"
-                    Point3="201.333333333333,33.8644825018615" />
-                  <mssgle:LineSegment
-                    End="201.333333333333,66.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="29.9577604166665,34.8644825018615,141.4178125,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="Package\UpdateFinal\Pull ESData_Final"
-          TopLeft="81,27" />
-        <EdgeLayout
-          Id="Package\UpdateFinal.Paths[OLE DB Source Output]"
-          TopLeft="242,49">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="136,0"
-              Start="0,0"
-              End="128.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="128.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\UpdateFinal\Pull ESData_Final">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\UpdateOriginal">
     <LayoutInfo>
       <GraphLayout
@@ -55939,32 +55949,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\UpdateStaging">
+    design-time-name="Package\UpdateFinal">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="163,42"
-          Id="Package\UpdateStaging\Script Component"
+          Id="Package\UpdateFinal\Script Component"
           TopLeft="378,29" />
         <NodeLayout
-          Size="161,42"
-          Id="Package\UpdateStaging\Pull ESData_Final"
-          TopLeft="68,33" />
-        <NodeLayout
-          Size="267,42"
-          Id="Package\UpdateStaging\OLE DB Command_Update_ESDataFinal"
-          TopLeft="261,144" />
-        <NodeLayout
           Size="130,42"
-          Id="Package\UpdateStaging\Multicast 3"
+          Id="Package\UpdateFinal\Multicast 3"
           TopLeft="574,260" />
         <NodeLayout
           Size="130,42"
-          Id="Package\UpdateStaging\Multicast 2"
+          Id="Package\UpdateFinal\Multicast 2"
           TopLeft="43,248" />
+        <NodeLayout
+          Size="267,42"
+          Id="Package\UpdateFinal\OLE DB Command_Update_ESDataFinal"
+          TopLeft="261,144" />
         <EdgeLayout
-          Id="Package\UpdateStaging.Paths[Output 0]"
+          Id="Package\UpdateFinal.Paths[Output 0]"
           TopLeft="459.5,71">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -55998,29 +56004,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\UpdateStaging.Paths[OLE DB Source Output]"
-          TopLeft="229,52">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="149,0"
-              Start="0,0"
-              End="141.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="141.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\UpdateStaging.Paths[OLE DB Command Output]"
+          Id="Package\UpdateFinal.Paths[OLE DB Command Output]"
           TopLeft="351.333333333333,186">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -56054,7 +56038,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\UpdateStaging.Paths[OLE DB Command Error Output]"
+          Id="Package\UpdateFinal.Paths[OLE DB Command Error Output]"
           TopLeft="437.666666666667,186">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -56089,11 +56073,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="161,42"
+          Id="Package\UpdateFinal\Pull ESData_Final"
+          TopLeft="81,27" />
+        <EdgeLayout
+          Id="Package\UpdateFinal.Paths[OLE DB Source Output]"
+          TopLeft="242,49">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136,0"
+              Start="0,0"
+              End="128.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="128.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\UpdateStaging\Pull ESData_Final">
+    design-time-name="Package\UpdateFinal\Pull ESData_Final">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

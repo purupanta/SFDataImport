@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="AdhocReports"
   DTS:PackageType="5"
-  DTS:VersionBuild="66"
-  DTS:VersionGUID="{07609567-0473-4DA9-97FD-86F0ED99C57B}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{B6A3E717-EEBD-4ECA-AE3B-15462F2E3B89}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -24,6 +24,23 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\AdHoc\App Fee Not Paid  - Updated (TR, RA, ND).xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SFProd]"
+      DTS:CreationName="DevartSalesforce"
+      DTS:DTSID="{D86FA8A6-D313-4127-8CD3-5C1CA7947656}"
+      DTS:ObjectName="SFProd">
+      <DTS:ObjectData>
+        <SalesforceConnectionManager>
+          <ConnectionString>Host=login.salesforce.com;User Id=ppa299@uky.edu</ConnectionString>
+          <Password
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAivkxXfgDsEK+jjS6XVw0GgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABnCCJvF7Uj9PLgrLFctGmBAAAAAASAAACgAAAAEAAAAED4u/AvpEZ2OSSJyuHEoxAgAAAASGXS1oZ//C6dHmaPi5Ej71py2bPXK/gsC26xTFmX9rkUAAAAW013kEHRqHOstNXL0zTiNGTRRtE</Password>
+          <SecurityToken
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAivkxXfgDsEK+jjS6XVw0GgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAPxc8nXT2CBXYz6+pORhq3AAAAAASAAACgAAAAEAAAAFeY7YkZQqdc146mstnpraU4AAAAbqnqpDYzGs4JTmMfsNkZYkKlWVmF5ixTjYmdZrP5GRfDFDD9m/DuKn6cgkVYKbz2uN1m9dUf+2gUAAAAwrHaEdm1+ev//ouLXhNElzS7HXQ</SecurityToken>
+        </SalesforceConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -55,7 +72,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="SendDate">
       <DTS:VariableValue
-        DTS:DataType="8">10/09/2023</DTS:VariableValue>
+        DTS:DataType="8">10/19/2020</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -75,7 +92,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="7">10/9/2023 3:32:09 PM</DTS:VariableValue>
+        DTS:DataType="7">10/19/2020 12:02:34 AM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -673,8 +690,8 @@
               <connections>
                 <connection
                   refId="Package\AdHoc Report With Email Given\InsertToSF_Ad_Hoc_Comms__c.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{D86FA8A6-D313-4127-8CD3-5C1CA7947656}:invalid"
-                  connectionManagerRefId="{D86FA8A6-D313-4127-8CD3-5C1CA7947656}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[SFProd]"
+                  connectionManagerRefId="Package.ConnectionManagers[SFProd]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -898,8 +915,8 @@
               <connections>
                 <connection
                   refId="Package\AdHoc Report With Email Given\InsertToSF_Contact.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{D86FA8A6-D313-4127-8CD3-5C1CA7947656}:invalid"
-                  connectionManagerRefId="{D86FA8A6-D313-4127-8CD3-5C1CA7947656}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[SFProd]"
+                  connectionManagerRefId="Package.ConnectionManagers[SFProd]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -2338,8 +2355,8 @@
               <connections>
                 <connection
                   refId="Package\AdHoc Report With Email Given\Lookup on Alternate Email.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SFProdConMgr]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -2594,8 +2611,8 @@
               <connections>
                 <connection
                   refId="Package\AdHoc Report With Email Given\Lookup on Email.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SFProdConMgr]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -2850,8 +2867,8 @@
               <connections>
                 <connection
                   refId="Package\AdHoc Report With Email Given\Lookup on University Email.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SFProdConMgr]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -3008,8 +3025,8 @@
               <connections>
                 <connection
                   refId="Package\AdHoc Report With Email Given\Lookup on Work Email.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SFProdConMgr]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -4094,24 +4111,24 @@
               startId="Package\AdHoc Report With Email Given\Conditional Split (LastName_Email Not Null).Outputs[LastName Not Null]" />
             <path
               refId="Package\AdHoc Report With Email Given.Paths[Lookup Match Output2]"
-              endId="Package\AdHoc Report With Email Given\mc3.Inputs[Multicast Input 1]"
-              name="Lookup Match Output"
-              startId="Package\AdHoc Report With Email Given\Lookup on Alternate Email.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\AdHoc Report With Email Given.Paths[Lookup Match Output3]"
-              endId="Package\AdHoc Report With Email Given\mc4.Inputs[Multicast Input 1]"
-              name="Lookup Match Output"
-              startId="Package\AdHoc Report With Email Given\Lookup on University Email.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\AdHoc Report With Email Given.Paths[Lookup Match Output]"
               endId="Package\AdHoc Report With Email Given\mc5.Inputs[Multicast Input 1]"
               name="Lookup Match Output"
               startId="Package\AdHoc Report With Email Given\Lookup on Work Email.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\AdHoc Report With Email Given.Paths[Lookup Match Output1]"
+              refId="Package\AdHoc Report With Email Given.Paths[Lookup Match Output3]"
               endId="Package\AdHoc Report With Email Given\mc2.Inputs[Multicast Input 1]"
               name="Lookup Match Output"
               startId="Package\AdHoc Report With Email Given\Lookup on Email.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\AdHoc Report With Email Given.Paths[Lookup Match Output]"
+              endId="Package\AdHoc Report With Email Given\mc3.Inputs[Multicast Input 1]"
+              name="Lookup Match Output"
+              startId="Package\AdHoc Report With Email Given\Lookup on Alternate Email.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\AdHoc Report With Email Given.Paths[Lookup Match Output1]"
+              endId="Package\AdHoc Report With Email Given\mc4.Inputs[Multicast Input 1]"
+              name="Lookup Match Output"
+              startId="Package\AdHoc Report With Email Given\Lookup on University Email.Outputs[Lookup Match Output]" />
             <path
               refId="Package\AdHoc Report With Email Given.Paths[Lookup No Match Output]"
               endId="Package\AdHoc Report With Email Given\Derived Columns.Inputs[Derived Column Input]"
@@ -4154,14 +4171,14 @@
               startId="Package\AdHoc Report With Email Given\mc2.Outputs[Multicast Output 2]" />
             <path
               refId="Package\AdHoc Report With Email Given.Paths[RecordId Output1]"
-              endId="Package\AdHoc Report With Email Given\mc8.Inputs[Multicast Input 1]"
-              name="RecordId Output"
-              startId="Package\AdHoc Report With Email Given\InsertToSF_Ad_Hoc_Comms__c.Outputs[RecordId Output]" />
-            <path
-              refId="Package\AdHoc Report With Email Given.Paths[RecordId Output]"
               endId="Package\AdHoc Report With Email Given\mc6.Inputs[Multicast Input 1]"
               name="RecordId Output"
               startId="Package\AdHoc Report With Email Given\InsertToSF_Contact.Outputs[RecordId Output]" />
+            <path
+              refId="Package\AdHoc Report With Email Given.Paths[RecordId Output]"
+              endId="Package\AdHoc Report With Email Given\mc8.Inputs[Multicast Input 1]"
+              name="RecordId Output"
+              startId="Package\AdHoc Report With Email Given\InsertToSF_Ad_Hoc_Comms__c.Outputs[RecordId Output]" />
             <path
               refId="Package\AdHoc Report With Email Given.Paths[Union All Output 1]"
               endId="Package\AdHoc Report With Email Given\Derived Column.Inputs[Derived Column Input]"
@@ -4349,7 +4366,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\AdHoc Report With Email Given.Paths[Lookup Match Output1]"
+          Id="Package\AdHoc Report With Email Given.Paths[Lookup Match Output3]"
           TopLeft="224,278.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4373,7 +4390,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\AdHoc Report With Email Given.Paths[Lookup Match Output]"
+          Id="Package\AdHoc Report With Email Given.Paths[Lookup Match Output2]"
           TopLeft="258,606.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4397,7 +4414,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\AdHoc Report With Email Given.Paths[Lookup Match Output3]"
+          Id="Package\AdHoc Report With Email Given.Paths[Lookup Match Output1]"
           TopLeft="275,492">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4433,7 +4450,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\AdHoc Report With Email Given.Paths[Lookup Match Output2]"
+          Id="Package\AdHoc Report With Email Given.Paths[Lookup Match Output]"
           TopLeft="268,381">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4737,7 +4754,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\AdHoc Report With Email Given.Paths[RecordId Output]"
+          Id="Package\AdHoc Report With Email Given.Paths[RecordId Output1]"
           TopLeft="134.666666666667,826">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4771,7 +4788,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\AdHoc Report With Email Given.Paths[RecordId Output1]"
+          Id="Package\AdHoc Report With Email Given.Paths[RecordId Output]"
           TopLeft="563.666666666667,727">
           <EdgeLayout.Curve>
             <mssgle:Curve

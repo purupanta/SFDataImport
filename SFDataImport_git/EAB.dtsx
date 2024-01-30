@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="EAB"
   DTS:PackageType="5"
-  DTS:VersionBuild="222"
-  DTS:VersionGUID="{F183FD32-6CD0-4C57-BFA0-579EED5C653B}">
+  DTS:VersionBuild="221"
+  DTS:VersionGUID="{71352676-4F1D-4FA0-A3F1-99DB3E863167}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -155,6 +155,16 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}"
+      DTS:ObjectName="sql16dev01\general.SalesforceStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql16dev01\general;Initial Catalog=SalesforceStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[UK30629_Search_EAB]"
       DTS:CreationName="EXCEL"
       DTS:DTSID="{AC42EF00-5641-40CC-9FD5-9907925FF3B5}"
@@ -175,7 +185,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">1220_StudentJourneyReport_20221111.xls</DTS:VariableValue>
+        DTS:DataType="8">University of Kentucky 4.2023.csv</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -1320,8 +1330,8 @@
               <connections>
                 <connection
                   refId="Package\EAB Load (Box)\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4363,8 +4373,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\EAB Load (Box)New\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7773,8 +7783,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\EAB_NEW\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9175,8 +9185,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\UK30629_Search_EAB (SFTP)\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10470,8 +10480,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\UK30629_Search_EAB_FixToTransfer\Devart Salesforce Destination.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -11008,8 +11018,8 @@ SELECT TOP (10000000) [Id]
               <connections>
                 <connection
                   refId="Package\UK30629_Search_EAB_FixToTransfer\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
-                  connectionManagerRefId="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>

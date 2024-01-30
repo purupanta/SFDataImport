@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="OutOfStateRecordsRequest"
   DTS:PackageType="5"
-  DTS:VersionBuild="92"
-  DTS:VersionGUID="{AE0B8137-A8C0-4BB4-895C-775E07B71068}">
+  DTS:VersionBuild="91"
+  DTS:VersionGUID="{0B679F43-6D6C-48AD-9EDB-7D0C2DCDE37D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,6 +26,16 @@
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\OutOfStateRecordsRequest\SpecialDataRequest2023\Check\POP3ParentEmailNoTerm.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}"
+      DTS:ObjectName="sql16dev01\general.SalesforceStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql16dev01\general;Initial Catalog=SalesforceStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
@@ -37,7 +47,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">1220_StudentJourneyReport_20221111.xls</DTS:VariableValue>
+        DTS:DataType="8">NEW_POP3ParentEmailNoTerm.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -48,7 +58,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="LocActiveFile">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\OutOfStateRecordsRequest\1220_StudentJourneyReport_20221111.xls</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\OutOfStateRecordsRequest\NEW_POP3ParentEmailNoTerm.csv</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -258,8 +268,8 @@ SELECT t1.[Id]
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Pull from ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2162,8 +2172,8 @@ WHERE ( [Id] = ?)</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Update ESData_Final.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3298,8 +3308,8 @@ WHERE ( [Id] = ?)</property>
               <connections>
                 <connection
                   refId="Package\OutOfStateRecordsRequest\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
-                  connectionManagerRefId="{0FE2BF74-C0F8-44D0-ACA8-607F483B0D46}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5702,8 +5712,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\UpdateContact\Devart Salesforce Destination.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -7478,8 +7488,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\UpdateContact\Pull ESData_Final.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9515,8 +9525,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\UpdateRecruitment\Devart Salesforce Destination.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -10235,8 +10245,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\UpdateRecruitment\Pull ESData_Final.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -12272,8 +12282,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\UpdateRFI\Devart Salesforce Destination.Connections[SalesforceConnectionManager]"
-                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
-                  connectionManagerRefId="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:invalid"
+                  connectionManagerID="{37BC45DD-74AB-4807-9BD9-6EC9742B8EAB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[ppa299@prod]"
                   description="Devart Connection Manager for Salesforce connections"
                   name="SalesforceConnectionManager" />
               </connections>
@@ -12855,8 +12865,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
               <connections>
                 <connection
                   refId="Package\UpdateRFI\Pull ESData_Final.Connections[OleDbConnection]"
-                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                  connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                  connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -14747,23 +14757,23 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==]]></arrayElement>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="151,42"
+          Size="151.2,41.6"
           Id="Package\Data Flow Task"
           TopLeft="68,181" />
         <NodeLayout
-          Size="206,42"
+          Size="206.4,41.6"
           Id="Package\OutOfStateRecordsRequest"
           TopLeft="65,73" />
         <NodeLayout
-          Size="148,42"
+          Size="148,41.6"
           Id="Package\UpdateContact"
           TopLeft="74,303" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\UpdateRecruitment"
           TopLeft="67,382" />
         <NodeLayout
-          Size="129,42"
+          Size="128.8,41.6"
           Id="Package\UpdateRFI"
           TopLeft="81,482" />
       </GraphLayout>

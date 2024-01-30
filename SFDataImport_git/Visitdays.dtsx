@@ -11,11 +11,21 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="visitdays"
   DTS:PackageType="5"
-  DTS:VersionBuild="351"
-  DTS:VersionGUID="{EED0B726-A125-4AB5-A432-1F03EC81075A}">
+  DTS:VersionBuild="350"
+  DTS:VersionGUID="{B7308274-446A-48F3-9601-B0EB5F314AFA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}"
+      DTS:ObjectName="sql16dev01\general.SalesforceStaging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=sql16dev01\general;Initial Catalog=SalesforceStaging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[visitdays]"
       DTS:CreationName="FLATFILE"
@@ -515,6 +525,25 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[VisitdaysSFTP]"
+      DTS:CreationName="FTP"
+      DTS:DTSID="{4AF5A4C8-234D-461D-B3D6-9B0C3FC0AA43}"
+      DTS:ObjectName="VisitdaysSFTP">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="visitdays.exavault.com:21">
+          <DTS:FtpConnection
+            DTS:ServerName="visitdays.exavault.com"
+            DTS:ServerUserName="uky">
+            <DTS:Property
+              DTS:Name="ServerPassword"
+              Sensitive="1"
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3JNSq67qv0ifUA3gJ2wjVQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAD4Yv5WTVlz3zX6lRT+2BJMAAAAAASAAACgAAAAEAAAAKUYy+KygARk/DDQ1k4mjeswAAAAg2eunV1f0rGGvvraRvXVBpTp/21QDj1FFwOfG6JFfc1B2wAcSqwp2BENKNXVD9dXFAAAAC+7EHrX2Ha/LTkCrhUblId8phUF</DTS:Property>
+          </DTS:FtpConnection>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[visitdays_merged_deduped_csv]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{64DA027B-4A73-4B9B-A0C7-E7C95D0D7CA6}"
@@ -758,7 +787,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="NDaysBack">
       <DTS:VariableValue
-        DTS:DataType="7">10/8/2023 3:39:19 PM</DTS:VariableValue>
+        DTS:DataType="7">5/31/2021 11:32:15 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -769,7 +798,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="NDaysBack0">
       <DTS:VariableValue
-        DTS:DataType="8">2023-10-08</DTS:VariableValue>
+        DTS:DataType="8">2021-05-31</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -780,7 +809,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="8">10092023</DTS:VariableValue>
+        DTS:DataType="8">06012021</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -791,7 +820,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate0">
       <DTS:VariableValue
-        DTS:DataType="8">10-09-2023</DTS:VariableValue>
+        DTS:DataType="8">06-01-2021</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -812,7 +841,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VisitdaysNewDirToday">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_10-09-2023</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_06-01-2021</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -823,7 +852,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VisitdaysProcessingDir">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_10092023_PROCESSING</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_06012021_PROCESSING</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -834,7 +863,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VisitdaysRemoteFileFQN">
       <DTS:VariableValue
-        DTS:DataType="8">/UKY_UserVisit_2023-10-09*.csv</DTS:VariableValue>
+        DTS:DataType="8">/UKY_UserVisit_2021-06-01*.csv</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -1558,8 +1587,8 @@
               <connections>
                 <connection
                   refId="Package\Push YouVisit Source File NewType\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                  connectionManagerID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
-                  connectionManagerRefId="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                  connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2727,8 +2756,8 @@
                   <connections>
                     <connection
                       refId="Package\Tests\DedupRecords\Pull_ESData_Original.Connections[OleDbConnection]"
-                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
-                      connectionManagerRefId="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:invalid"
+                      connectionManagerID="{16EA0D3B-1646-4EDF-84D6-08D98FCFC046}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[sql16dev01_general.SalesforceStaging]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -7468,8 +7497,8 @@ AA==]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Tests\ImportVisitdaysCombinedFileToStaging\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                      connectionManagerID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
-                      connectionManagerRefId="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
+                      connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                      connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -10282,8 +10311,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   <connections>
                     <connection
                       refId="Package\Tests\ImportVisitdaysToStaging\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                      connectionManagerID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
-                      connectionManagerRefId="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
+                      connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                      connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -11514,7 +11543,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <DTS:ObjectData>
               <ForEachFileEnumeratorProperties>
                 <FEFEProperty
-                  Folder="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_10092023_PROCESSING" />
+                  Folder="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_06012021_PROCESSING" />
                 <FEFEProperty
                   FileSpec="*.csv" />
                 <FEFEProperty
@@ -12317,8 +12346,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       <connections>
                         <connection
                           refId="Package\Visitdays Running\Foreach file downloaded from VisitdaysSFTP\Push VisitDays Source File\Insert ESData_OriginalStaging.Connections[OleDbConnection]"
-                          connectionManagerID="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
-                          connectionManagerRefId="{F2F51043-013C-41B3-BAD3-64FF8A4A6959}:invalid"
+                          connectionManagerID="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
+                          connectionManagerRefId="Package.ConnectionManagers[sql16dev01\general.SalesforceStaging]"
                           description="The OLE DB runtime connection used to access the database."
                           name="OleDbConnection" />
                       </connections>
@@ -13546,7 +13575,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               TaskOperationType="Receive"
               TaskIsLocalPathVar="True"
               TaskLocalPath="User::VisitdaysProcessingDir"
-              TaskRemotePath="/UKY_UserVisit_2023-10-09*.csv"
+              TaskRemotePath="/UKY_UserVisit_2021-06-01*.csv"
               TaskOverwriteDest="True" />
           </DTS:ObjectData>
         </DTS:Executable>

@@ -46,5 +46,7 @@
 1. "Data Dictionary V2.0", URL: https://docs.google.com/spreadsheets/d/1FjXQeRECMETgooFskekFrrzCO1jzgogo-1M_nCODQWI/edit#gid=0
 2. Contacts, RFIForms, Recruitments operations in flow, URL: https://lucid.app/lucidchart/45222f8d-8a4a-4224-950e-4c3b47487be8/edit?page=0_0&invitationId=inv_ff90952b-77ae-4e88-bce0-9449845de378#
 3. DataLoad Log, URL: https://uky.lightning.force.com/lightning/o/DataLoadLog__c/list
+4. Name Purchases directory in the sharepoint
+5. DataLoadReport, URL: https://luky.sharepoint.com/:x:/r/sites/CRMOperations/Shared%20Documents/Name%20Purchases/SSIS_DataLoad/MainReport/DataLoadReport.xlsx?d=wb441f82774534a76999934de0ade0c19&csf=1&web=1&e=Pd28p1
 
 <hr />

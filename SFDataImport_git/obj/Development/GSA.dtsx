@@ -230,7 +230,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">10.20.23 Inquiry Upload.xlsx</DTS:VariableValue>
+        DTS:DataType="8">RecruiterCard02142024.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -241,7 +241,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="8">11302023</DTS:VariableValue>
+        DTS:DataType="8">02262024</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -252,7 +252,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate0">
       <DTS:VariableValue
-        DTS:DataType="8">11-30-2023</DTS:VariableValue>
+        DTS:DataType="8">02-26-2024</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>

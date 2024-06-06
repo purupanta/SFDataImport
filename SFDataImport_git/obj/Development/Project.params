@@ -226,7 +226,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">RecruiterCards Template and Instructions.csv</SSIS:Property>
+        SSIS:Name="Value">4.23.24 Inquiry Upload - NOVA Tidewater Richmond April 2024.xlsx</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -376,6 +376,27 @@
         SSIS:Name="Value">0</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">9</SSIS:Property>
+    </SSIS:Properties>
+  </SSIS:Parameter>
+  <SSIS:Parameter
+    SSIS:Name="KCTCS">
+    <SSIS:Properties>
+      <SSIS:Property
+        SSIS:Name="ID">{3f3992ee-951e-42b6-a783-f7fa2743ed08}</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="CreationName"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Description"></SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Required">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Sensitive">0</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="Value">KCTCS 40+ hours</SSIS:Property>
+      <SSIS:Property
+        SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
   </SSIS:Parameter>
 </SSIS:Parameters>

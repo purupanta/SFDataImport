@@ -7,9 +7,9 @@
     <SalesforceConnectionManager>
       <ConnectionString>Max Pool Size=1000;Connection Timeout=60;Default Command Timeout=60;Host=test.salesforce.com;User Id=ppa299@uky.edu.fullcopy</ConnectionString>
       <Password
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkDj+FTdvFEqIwG8KU2BM/wAAAAACAAAAAAADZgAAwAAAABAAAAD+G4QrVvWqsp1JfX6wBxApAAAAAASAAACgAAAAEAAAAIdm/6fTi7TgRihSPGVBh+o4AAAAne5ox/iyKdox6w71v8O0Yv8BRajBuTNLf0pBChPqeYPHKNmgI2sepjISbBaYlfm3B8fMSSk0hW8UAAAAjNk63uaciBfOkUNJJLUjtOqTuCw=</Password>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA59D5BXhMlkuKqcO1Ydm6lAAAAAACAAAAAAADZgAAwAAAABAAAACl5/Yvccpfc3EiwhlPGKQrAAAAAASAAACgAAAAEAAAAOCaN8V1n6xXeSXSdrP8uso4AAAABSBTilLaQg27XW2zFfSlTh5fhYNDdp76SHyR5GIuE7ceqqJUVt2LxMXCyupBifw6+oGu9cONesIUAAAACfgkS8sUCoLPJ3Pcx0PH+cXBh5E=</Password>
       <SecurityToken
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkDj+FTdvFEqIwG8KU2BM/wAAAAACAAAAAAADZgAAwAAAABAAAADBaXT5xYxWUjBNBVrpxaoJAAAAAASAAACgAAAAEAAAAHR7aMi65sw2PjNYnuMNnoVIAAAAsL8TP8X1mswmApSz6HR0Hb7bUkbOki1eMIW/PJ/UpfLWE48hwjjLwft8/zDVFWIkrAdSB1WVBVNxZlNG5F4Hhkox6OoBoylwFAAAADF1vzi/IC258t3EtTO3dAcCrpEJ</SecurityToken>
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA59D5BXhMlkuKqcO1Ydm6lAAAAAACAAAAAAADZgAAwAAAABAAAADL1+OYZ0uKi6DUSLzLRtlgAAAAAASAAACgAAAAEAAAADofMTdNno8P16XFo9JbG8pIAAAAnW1vNYiZXbxkXorZqMfes4u/A/cn3rJrfnkJ/kGXVt4fdsoxC8w18uBBOL4pgBYGMlxJetEOV5ifJlPF8V/9lQEv1UztfMuIFAAAAL1lved41k1g1CcBOLgzC7Q0Pkq4</SecurityToken>
     </SalesforceConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

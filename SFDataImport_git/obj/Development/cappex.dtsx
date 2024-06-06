@@ -1110,7 +1110,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileName">
       <DTS:VariableValue
-        DTS:DataType="8">Chicago Fairs2.xlsx</DTS:VariableValue>
+        DTS:DataType="8">RecruiterCard02142024.xlsx</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1121,7 +1121,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ActiveFileNameCappexBase">
       <DTS:VariableValue
-        DTS:DataType="8">cappex_01182024.csv</DTS:VariableValue>
+        DTS:DataType="8">cappex_02262024.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1132,7 +1132,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="8">01182024</DTS:VariableValue>
+        DTS:DataType="8">02262024</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1143,7 +1143,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate0">
       <DTS:VariableValue
-        DTS:DataType="8">01-18-2024</DTS:VariableValue>
+        DTS:DataType="8">02-26-2024</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>

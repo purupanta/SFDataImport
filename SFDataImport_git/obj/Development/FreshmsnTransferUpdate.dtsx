@@ -314,7 +314,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\FreshmanUpdateFail_2023-11-30.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\FreshmanUpdateFail_2024-02-26.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -632,7 +632,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\FreshmanUpdateSuccess_2023-11-30.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\FreshmanUpdateSuccess_2024-02-26.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -955,7 +955,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\TransferUpdateFail_2023-11-30.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\TransferUpdateFail_2024-02-26.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1281,7 +1281,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\TransferUpdateSuccess_2023-11-30.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\FreshmanTransferDailyUpdate\TransferUpdateSuccess_2024-02-26.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1635,7 +1635,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="N_DaysBackDate_LB">
       <DTS:VariableValue
-        DTS:DataType="7">10/1/2023 9:13:56 AM</DTS:VariableValue>
+        DTS:DataType="7">12/28/2023 3:29:21 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1646,7 +1646,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="N_DaysBackDate_UB">
       <DTS:VariableValue
-        DTS:DataType="7">11/30/2023 9:13:56 AM</DTS:VariableValue>
+        DTS:DataType="7">2/26/2024 3:29:21 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1657,7 +1657,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="OutputCSVFileDateTimeStamp">
       <DTS:VariableValue
-        DTS:DataType="8">_2023-11-30</DTS:VariableValue>
+        DTS:DataType="8">_2024-02-26</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1668,7 +1668,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="7">11/30/2023 9:13:56 AM</DTS:VariableValue>
+        DTS:DataType="7">2/26/2024 3:29:21 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1679,7 +1679,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="X_HrsBack">
       <DTS:VariableValue
-        DTS:DataType="7">11/29/2023 8:13:56 PM</DTS:VariableValue>
+        DTS:DataType="7">2/26/2024 2:29:21 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1690,7 +1690,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Y_HrsBack">
       <DTS:VariableValue
-        DTS:DataType="7">11/29/2023 10:13:56 PM</DTS:VariableValue>
+        DTS:DataType="7">2/26/2024 4:29:21 AM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -22893,24 +22893,24 @@ AND Contact_Communication_Owner__c = ''</property>
               startId="Package\DailyUpdate_V1_CappexEngineering\Derived Column_F22.Outputs[Derived Column Output]" />
             <path
               refId="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output2]"
-              endId="Package\DailyUpdate_V1_CappexEngineering\mc3.Inputs[Multicast Input 1]"
-              name="Error Output"
-              startId="Package\DailyUpdate_V1_CappexEngineering\Transfer2022_Update.Outputs[Error Output]" />
-            <path
-              refId="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output3]"
-              endId="Package\DailyUpdate_V1_CappexEngineering\mc1.Inputs[Multicast Input 1]"
-              name="Error Output"
-              startId="Package\DailyUpdate_V1_CappexEngineering\Freshman2022_Update.Outputs[Error Output]" />
-            <path
-              refId="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output]"
               endId="Package\DailyUpdate_V1_CappexEngineering\mc2.Inputs[Multicast Input 1]"
               name="Error Output"
               startId="Package\DailyUpdate_V1_CappexEngineering\FreshmanNot2022_Update.Outputs[Error Output]" />
             <path
-              refId="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output1]"
+              refId="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output3]"
               endId="Package\DailyUpdate_V1_CappexEngineering\mc4.Inputs[Multicast Input 1]"
               name="Error Output"
               startId="Package\DailyUpdate_V1_CappexEngineering\TransferNot2022_Update.Outputs[Error Output]" />
+            <path
+              refId="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output]"
+              endId="Package\DailyUpdate_V1_CappexEngineering\mc3.Inputs[Multicast Input 1]"
+              name="Error Output"
+              startId="Package\DailyUpdate_V1_CappexEngineering\Transfer2022_Update.Outputs[Error Output]" />
+            <path
+              refId="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output1]"
+              endId="Package\DailyUpdate_V1_CappexEngineering\mc1.Inputs[Multicast Input 1]"
+              name="Error Output"
+              startId="Package\DailyUpdate_V1_CappexEngineering\Freshman2022_Update.Outputs[Error Output]" />
             <path
               refId="Package\DailyUpdate_V1_CappexEngineering.Paths[Lookup Match Output]"
               endId="Package\DailyUpdate_V1_CappexEngineering\mc0.Inputs[Multicast Input 1]"
@@ -36299,7 +36299,7 @@ where [refTable].[Email] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\FixLastNameAndConcatId\2219:invalid};</property>
+                  name="ParameterMap">#{Package\FixLastNameAndConcatId\2461:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -40672,7 +40672,7 @@ where [refTable].[Email] = ?</property>
           Id="Package\DailyUpdate_V1_CappexEngineering\mc1"
           TopLeft="85.3333333333334,910.75" />
         <EdgeLayout
-          Id="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output3]"
+          Id="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output1]"
           TopLeft="118.333333333333,855.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40712,7 +40712,7 @@ where [refTable].[Email] = ?</property>
           Id="Package\DailyUpdate_V1_CappexEngineering\mc2"
           TopLeft="402.333333333333,934.75" />
         <EdgeLayout
-          Id="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output]"
+          Id="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output2]"
           TopLeft="402.333333333333,850.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40752,7 +40752,7 @@ where [refTable].[Email] = ?</property>
           Id="Package\DailyUpdate_V1_CappexEngineering\mc3"
           TopLeft="759.333333333333,792.75" />
         <EdgeLayout
-          Id="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output2]"
+          Id="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output]"
           TopLeft="686.833333333333,741.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -40792,7 +40792,7 @@ where [refTable].[Email] = ?</property>
           Id="Package\DailyUpdate_V1_CappexEngineering\mc4"
           TopLeft="749.333333333333,275.75" />
         <EdgeLayout
-          Id="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output1]"
+          Id="Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output3]"
           TopLeft="708.833333333333,370.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -41043,13 +41043,13 @@ where [refTable].[Email] = ?</property>
             <s:String>Package\DailyUpdate_V1_CappexEngineering\TransferNot2022_Update</s:String>
             <s:String>Package\DailyUpdate_V1_CappexEngineering.Paths[Derived Column Output2]</s:String>
             <s:String>Package\DailyUpdate_V1_CappexEngineering\mc1</s:String>
-            <s:String>Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output3]</s:String>
-            <s:String>Package\DailyUpdate_V1_CappexEngineering\mc2</s:String>
-            <s:String>Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output]</s:String>
-            <s:String>Package\DailyUpdate_V1_CappexEngineering\mc3</s:String>
-            <s:String>Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output2]</s:String>
-            <s:String>Package\DailyUpdate_V1_CappexEngineering\mc4</s:String>
             <s:String>Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output1]</s:String>
+            <s:String>Package\DailyUpdate_V1_CappexEngineering\mc2</s:String>
+            <s:String>Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output2]</s:String>
+            <s:String>Package\DailyUpdate_V1_CappexEngineering\mc3</s:String>
+            <s:String>Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output]</s:String>
+            <s:String>Package\DailyUpdate_V1_CappexEngineering\mc4</s:String>
+            <s:String>Package\DailyUpdate_V1_CappexEngineering.Paths[Error Output3]</s:String>
             <s:String>Package\DailyUpdate_V1_CappexEngineering\OLE DB Source 1</s:String>
             <s:String>Package\DailyUpdate_V1_CappexEngineering\Conditional Split 2</s:String>
             <s:String>Package\DailyUpdate_V1_CappexEngineering.Paths[CappexEnggFileNameOnly]</s:String>

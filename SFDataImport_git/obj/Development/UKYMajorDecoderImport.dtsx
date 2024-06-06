@@ -42,7 +42,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\MajorDecoder_2023-11-30.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\MajorDecoder_2024-02-26.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -181,7 +181,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\Logfiles\MajorDecoderSuccessLog_2023-11-30.csv">
+          DTS:ConnectionString="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\CommonFiles\MajorDecoder\Logfiles\MajorDecoderSuccessLog_2024-02-26.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"

@@ -538,7 +538,7 @@
             <DTS:Property
               DTS:Name="ServerPassword"
               Sensitive="1"
-              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKhBMQYIaCEa0pGsohdf26AAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACl/Qg2GwgeF/BAEPqrIrEDAAAAAASAAACgAAAAEAAAADpMezCCF361R+l6GYDEZNQwAAAAl/v8/b7i0HxXHKRTbYMfX/HJABMH/TQ00CMki9u+wEjNvEdujV5/gZ9Lc2L9uq8tFAAAAPNDMuiKV+BfTTX1/e7MgC2brqYC</DTS:Property>
+              Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAkDj+FTdvFEqIwG8KU2BM/wAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAQbJmv+VCoCHvqFk9SR5kKAAAAAASAAACgAAAAEAAAAAxTJ/8al3NEfqfxGSfMFY0wAAAAjdGzzV7jStBO/HtEJCklJhKLyNR6jCGSLrbcbnwtZXG84d0oZ4n46hcsTbySGMb/FAAAAFnxuFnr8vXilLfy8SqRept5D2i2</DTS:Property>
           </DTS:FtpConnection>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
@@ -787,7 +787,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="NDaysBack">
       <DTS:VariableValue
-        DTS:DataType="7">11/29/2023 9:14:03 AM</DTS:VariableValue>
+        DTS:DataType="7">2/25/2024 3:29:24 PM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -798,7 +798,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="NDaysBack0">
       <DTS:VariableValue
-        DTS:DataType="8">2023-11-29</DTS:VariableValue>
+        DTS:DataType="8">2024-02-25</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -809,7 +809,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate">
       <DTS:VariableValue
-        DTS:DataType="8">11302023</DTS:VariableValue>
+        DTS:DataType="8">02262024</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -820,7 +820,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="TodayDate0">
       <DTS:VariableValue
-        DTS:DataType="8">11-30-2023</DTS:VariableValue>
+        DTS:DataType="8">02-26-2024</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -841,7 +841,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VisitdaysNewDirToday">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_11-30-2023</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_02-26-2024</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -852,7 +852,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VisitdaysProcessingDir">
       <DTS:VariableValue
-        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_11302023_PROCESSING</DTS:VariableValue>
+        DTS:DataType="8">C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_02262024_PROCESSING</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -863,7 +863,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VisitdaysRemoteFileFQN">
       <DTS:VariableValue
-        DTS:DataType="8">/UKY_UserVisit_2023-11-30*.csv</DTS:VariableValue>
+        DTS:DataType="8">/UKY_UserVisit_2024-02-26*.csv</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -11482,7 +11482,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="MoveProcessingDir"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <FileSystemData
@@ -11514,7 +11514,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="CreateProcessingDir"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <FileSystemData
@@ -11543,7 +11543,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <DTS:ObjectData>
               <ForEachFileEnumeratorProperties>
                 <FEFEProperty
-                  Folder="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_11302023_PROCESSING" />
+                  Folder="C:\Users\ppa299\Source\Repos\SFDataImport\DataProcessing\visitdays\visitdays_02262024_PROCESSING" />
                 <FEFEProperty
                   FileSpec="*.csv" />
                 <FEFEProperty
@@ -13565,7 +13565,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
           DTS:ExecutableType="Microsoft.FtpTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="PullVisitdaysFile(SFTPTask)"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:PropertyExpression
             DTS:Name="RemotePath">@[User::VisitdaysRemoteFileFQN]</DTS:PropertyExpression>
@@ -13575,7 +13575,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
               TaskOperationType="Receive"
               TaskIsLocalPathVar="True"
               TaskLocalPath="User::VisitdaysProcessingDir"
-              TaskRemotePath="/UKY_UserVisit_2023-11-30*.csv"
+              TaskRemotePath="/UKY_UserVisit_2024-02-26*.csv"
               TaskOverwriteDest="True" />
           </DTS:ObjectData>
         </DTS:Executable>
